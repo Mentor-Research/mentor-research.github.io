@@ -1,3 +1,11 @@
+
+# MAIN COLOR: 
+# SECONDARY COLOR:
+
+# HEADING FONT: <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+# BODY FONT: <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
+
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/Mentor-Research/mentorresearch/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
