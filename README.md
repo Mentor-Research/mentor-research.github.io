@@ -1,1 +1,1 @@
-https://mentor-research.github.io/mentorresearch/
+https://mentor-research.github.io
