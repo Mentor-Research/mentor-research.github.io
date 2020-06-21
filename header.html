@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+
+<style>
+
+.nav.navbar-nav li{
+  font-size: 15px;
+  text-align: center;
+  display:inline;
+  font-family: 'Montserrat';
+}
+
+.nav.navbar-nav {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.nav.navbar-nav a {
+  display:inline-block;
+  color: gray;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.nav.navbar-nav a:hover {
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.nav.navbar-nav a.active {
+  background-color: #4CAF50;
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 1px;
+  overflow: hidden;
+  background-color: #D0F7ED;
+  text-align:center;
+  position: relative;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+ul li{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.box{
+  text-align: center;
+  width: 100%;
+}
+
+#mission{
+  font-size: 300px;
+  color: var(--secText);
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  color: #303030;
+}
+
+:root {
+  --priText:  #181924;
+  --secText: #23232E;
+}
+
+.gene {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 800px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  z-index: -1;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  border: none;
+}
+
+#myVideo{
+  display: block;
+  position: fixed;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Hind';
+  cursor: pointer;
+}
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .content{
+    background: white;
+    color: var(--secText);
+    padding: 0px;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    height: 10000px;
+    width: 100%;
+  }
+
+</style>
+
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<!--link rel="icon" href="logo" /-->
+<!--link rel="apple-touch-icon" href="logo" /-->
+<title>GENEration-Z</title>
+
+<script>
+    (function($){ //separate scope to keep everything "private" for each module
+        //do additional javascript if required
+    })(jQuery);
+</script>
+
+<div class="box">
+  <div class="gene">
+    <h1>GENEration-Z</h1>
+  </div>
+<br>
+
+<a href="#" class="button"><span>
+  Register
+</span>  </a>
+
+  <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
+    <div class="container-fluid">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <!-- ** for toggle down ** <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </li> -->
+    <li><a href="joinus.html">Join Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+</div>
+</nav>
+
+<video autoplay muted loop id="myVideo">
+  <source src="video.mp4" type="video/mp4">
+  </video>
+
+  </html>
