@@ -4,15 +4,149 @@
 
 <style>
 
-  .content{
-    background: white;
-    color: var(--secText);
-    padding: 0px;
-    top: 0px;
-    left: 0px;
-    margin: 0px;
-    height: 10000px;
-    width: 100%;
+.nav.navbar-nav li{
+  font-size: 15px;
+  text-align: center;
+  display:inline;
+  font-family: 'Montserrat';
+}
+
+.nav.navbar-nav {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Style the links inside the navigation bar */
+.nav.navbar-nav a {
+  display:inline-block;
+  color: gray;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.nav.navbar-nav a:hover {
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.nav.navbar-nav a:active {
+  color: black;
+  font-weight: bold;
+}
+
+.nav.navbar-nav .active {
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 1px;
+  overflow: hidden;
+  background-color: #D0F7ED;
+  text-align:center;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul li{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.box{
+  text-align: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  color: #303030;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --priText:  #181924;
+  --secText: #23232E;
+}
+
+.gene {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  z-index: -1;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  border: none;
+}
+
+#myVideo{
+  display: block;
+  position: fixed;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-family: 'Hind';
+  cursor: pointer;
+}
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
   }
 
 </style>
@@ -20,25 +154,102 @@
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--link rel="icon" href="logo" /-->
 <!--link rel="apple-touch-icon" href="logo" /-->
 <title>GENEration-Z</title>
 
-<head>
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script>
-$(function(){
-  $("#header").load("header.html");
-});
-</script>
-</head>
+<div class="box">
+  <div class="gene">
+    <h1>GENEration-Z</h1>
+  </div>
+<br>
 
-<div id="header"></div>
+<a href="#" class="button"><span>
+  Register
+</span>  </a>
+
+  <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
+    <div class="container-fluid">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="team.html">Team</a></li>
+        <!-- ** for toggle down ** <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </li> -->
+    <li><a href="joinus.html">Join Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+</div>
+</nav>
+
+<video autoplay muted loop id="myVideo">
+  <source src="720p.mp4" type="video/mp4">
+  </video>
+
+  </html>
+
+<html>
+
+<style>
+
+
+  .content{
+    background: white;
+    color: var(--secText);
+    margin: 0px;
+    height: 10000px;
+    width: 100%;
+    padding: 0px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+h1 {
+  font-family: 'Montserrat';
+  padding: 0px;
+  margin: 0px;
+}
+
+.text {
+  color: var(--secText);
+  padding: 0px;
+  margin: 0px;
+  width: 800px;
+  display: inline-block;
+  text-align: center;
+  font-style: "Hind";
+  font-weight: none;
+}
+
+
+</style>
+
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/32.0/jquery.min.js"></script>
+
 <div class="content">
-
-hi
+<div id="box">
+<br><br>
+  <div id="mission">
+    <h1> Our Mission </h1>
+    <div class="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Porta lorem mollis aliquam ut porttitor. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Cursus mattis molestie a iaculis at. Vitae justo eget magna fermentum iaculis eu non diam. Viverra tellus in hac habitasse platea dictumst vestibulum.
+  </div>
+  </div>
 
 </div>
 
-  </html>
+</div>
+
+</html>

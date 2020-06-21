@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html>
 
 <style>
@@ -32,8 +30,12 @@
 }
 
 /* Add a color to the active/current link */
-.nav.navbar-nav a.active {
-  background-color: #4CAF50;
+.nav.navbar-nav a:active {
+  color: black;
+  font-weight: bold;
+}
+
+.nav.navbar-nav .active {
   color: black;
   font-weight: bold;
 }
@@ -59,11 +61,6 @@ ul li{
 .box{
   text-align: center;
   width: 100%;
-}
-
-#mission{
-  font-size: 300px;
-  color: var(--secText);
 }
 
 body {
@@ -158,16 +155,9 @@ body {
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <!--link rel="icon" href="logo" /-->
 <!--link rel="apple-touch-icon" href="logo" /-->
 <title>GENEration-Z</title>
-
-<script>
-    (function($){ //separate scope to keep everything "private" for each module
-        //do additional javascript if required
-    })(jQuery);
-</script>
 
 <div class="box">
   <div class="gene">
@@ -184,7 +174,7 @@ body {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
