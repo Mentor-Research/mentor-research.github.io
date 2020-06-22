@@ -1,6 +1,18 @@
+<!DOCTYPE html>
+
 <html>
 
 <style>
+
+:root {
+  --priText:  #294273;
+  --secText: #3B3B47;
+  --purple: #7D3FA6;
+  --dblue: #35278C;
+  --blue: #418FBF;
+  --green: #82D9D9;
+  --dgreen: #29A699;
+}
 
 .nav.navbar-nav li{
   font-size: 15px;
@@ -11,8 +23,11 @@
 
 .nav.navbar-nav {
   text-align: center;
-  display: inline-block;
+  display: block;
   width: 100%;
+  margin: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /* Style the links inside the navigation bar */
@@ -44,12 +59,13 @@ ul {
   list-style-type: none;
   margin: 1px;
   overflow: hidden;
-  background-color: #D0F7ED;
+  background-color: var(--green);
   text-align:center;
   position: relative;
-  display: inline;
+  display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 5px;
+  margin: 0px;
 }
 
 ul li{
@@ -61,16 +77,14 @@ ul li{
 .box{
   text-align: center;
   width: 100%;
+  padding: 0px;
+  margin: 0px;
 }
 
 body {
   font-family: 'Hind', sans-serif;
-  color: #303030;
-}
-
-:root {
-  --priText:  #181924;
-  --secText: #23232E;
+  padding: 0;
+  margin: 0;
 }
 
 .gene {
@@ -137,17 +151,6 @@ body {
   .button:hover span:after {
     opacity: 1;
     right: 0;
-  }
-
-  .content{
-    background: white;
-    color: var(--secText);
-    padding: 0px;
-    top: 0px;
-    left: 0px;
-    margin: 0px;
-    height: 10000px;
-    width: 100%;
   }
 
 </style>

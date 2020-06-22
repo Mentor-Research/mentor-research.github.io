@@ -4,6 +4,16 @@
 
 <style>
 
+:root {
+  --priText:  #294273;
+  --secText: #3B3B47;
+  --purple: #7D3FA6;
+  --dblue: #35278C;
+  --blue: #418FBF;
+  --green: #82D9D9;
+  --dgreen: #29A699;
+}
+
 .nav.navbar-nav li{
   font-size: 15px;
   text-align: center;
@@ -49,12 +59,12 @@ ul {
   list-style-type: none;
   margin: 1px;
   overflow: hidden;
-  background-color: #D0F7ED;
+  background-color: var(--green);
   text-align:center;
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0px;
+  padding: 5px;
   margin: 0px;
 }
 
@@ -73,14 +83,8 @@ ul li{
 
 body {
   font-family: 'Hind', sans-serif;
-  color: #303030;
   padding: 0;
   margin: 0;
-}
-
-:root {
-  --priText:  #181924;
-  --secText: #23232E;
 }
 
 .gene {
@@ -200,23 +204,26 @@ body {
 
 <style>
 
-
   .content{
     background: white;
-    color: var(--secText);
     margin: 0px;
-    height: 10000px;
     width: 100%;
     padding: 0px;
+    padding-bottom: 50px;
     display: inline-block;
     text-align: center;
   }
 }
 
-h1 {
+.head {
   font-family: 'Montserrat';
   padding: 0px;
   margin: 0px;
+  color: var(--priText);
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+  border-image-slice: 1;
+  border-width: 3px;
 }
 
 .text {
@@ -227,7 +234,78 @@ h1 {
   display: inline-block;
   text-align: center;
   font-style: "Hind";
-  font-weight: none;
+}
+
+#mission{
+  padding-bottom: 50px;
+}
+
+ body {
+	 font-family: 'Hind', sans-serif;
+	 margin: 0;
+}
+ main {
+	 min-width: 300px;
+	 max-width: 500px;
+	 margin: auto;
+}
+ p {
+	 font-size: 1em;
+	 line-height: 1.75em;
+	 border-top: 3px solid;
+	 border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+	 border-image-slice: 1;
+	 border-width: 3px;
+	 margin: 0;
+	 padding: 40px;
+	 counter-increment: section;
+	 position: relative;
+	 color: var(--secText);
+   text-align: left;
+}
+ p:before {
+   font-family: 'Montserrat';
+	 content: counter(section);
+	 position: absolute;
+	 border-radius: 50%;
+	 padding: 10px;
+	 height: 1.25em;
+	 width: 1.25em;
+	 background-color: #34435e;
+	 text-align: center;
+	 line-height: 1.25em;
+	 color: #fff;
+	 font-size: 1em;
+}
+ p:nth-child(odd) {
+	 border-right: 3px solid;
+	 padding-left: 0;
+}
+ p:nth-child(odd):before {
+	 left: 100%;
+	 margin-left: -20px;
+}
+ p:nth-child(even) {
+	 border-left: 3px solid;
+	 padding-right: 0;
+   text-align: right;
+}
+ p:nth-child(even):before {
+	 right: 100%;
+	 margin-right: -20px;
+}
+ p:first-child {
+	 border-top: 0;
+	 border-top-right-radius: 0;
+	 border-top-left-radius: 0;
+}
+ p:last-child {
+	 border-bottom-right-radius: 0;
+	 border-bottom-left-radius: 0;
+}
+
+  p .event{
+  font-weight: bold;
 }
 
 
@@ -236,17 +314,36 @@ h1 {
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/32.0/jquery.min.js"></script>
 
+<!--  MISSION STATEMENT -->
 <div class="content">
 <div id="box">
 <br><br>
   <div id="mission">
-    <h1> Our Mission </h1>
+    <div class="head"><h1> Our Mission </h1></div>
     <div class="text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Porta lorem mollis aliquam ut porttitor. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Cursus mattis molestie a iaculis at. Vitae justo eget magna fermentum iaculis eu non diam. Viverra tellus in hac habitasse platea dictumst vestibulum.
   </div>
   </div>
+
+<!-- TIMELINE -->
+
+<div class="head"><h1> Our Path </h1></div>
+<br>
+
+<main>
+  <p>
+    <a class="event">Date 1: Event</a><br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><a class="event">Date 2: Event</a><br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><a class="event">Date 3: Event</a><br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p><a class="event">Date 4: Event</a><br>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</main>
 
 </div>
 
