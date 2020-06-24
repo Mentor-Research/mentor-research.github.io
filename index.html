@@ -57,14 +57,13 @@
 
 ul {
   list-style-type: none;
-  margin: 1px;
   overflow: hidden;
   background-color: var(--green);
   text-align:center;
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 5px;
+  padding: 0px;
   margin: 0px;
 }
 
@@ -204,26 +203,33 @@ body {
 
 <style>
 
-  .content{
-    background: white;
-    margin: 0px;
-    width: 100%;
-    padding: 0px;
-    padding-bottom: 50px;
-    display: inline-block;
-    text-align: center;
-  }
+.content{
+  background: white;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  padding-bottom: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+.head .green{
+  color: var(--green);
 }
 
 .head {
+  white-space: pre;
   font-family: 'Montserrat';
-  padding: 0px;
+  display: inline-block;
   margin: 0px;
+  font-size: 40px;
+  padding: 30px;
+  font-weight: bold;
   color: var(--priText);
-  border-top: 3px solid;
+  /* border-top: 3px solid;
   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
   border-image-slice: 1;
-  border-width: 3px;
+  border-width: 3px; */
 }
 
 .text {
@@ -234,10 +240,12 @@ body {
   display: inline-block;
   text-align: center;
   font-style: "Hind";
+  padding-bottom: 50px;
 }
 
-#mission{
-  padding-bottom: 50px;
+.mission{
+  padding-bottom: 20px;
+  display: inline-block;
 }
 
  body {
@@ -245,8 +253,8 @@ body {
 	 margin: 0;
 }
  main {
-	 min-width: 300px;
-	 max-width: 500px;
+	 min-width: 500px;
+	 max-width: 700px;
 	 margin: auto;
 }
  p {
@@ -295,19 +303,38 @@ body {
 	 margin-right: -20px;
 }
  p:first-child {
-	 border-top: 0;
+   border-top: 3px solid;
+   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+   border-image-slice: 1;
+   border-width: 3px;
 	 border-top-right-radius: 0;
 	 border-top-left-radius: 0;
 }
  p:last-child {
 	 border-bottom-right-radius: 0;
 	 border-bottom-left-radius: 0;
+   border-bottom: 3px solid;
+   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+   border-image-slice: 1;
+   border-width: 3px;
 }
 
   p .event{
   font-weight: bold;
 }
 
+.footer p {
+ color: white;
+ text-align:center;
+}
+
+.footer{
+ position: fixed;
+ text-align: center;
+ bottom: 0px;
+ width: 100%;
+ background-color: #333;
+}
 
 </style>
 
@@ -317,20 +344,26 @@ body {
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/32.0/jquery.min.js"></script>
 
+<script>
+           $(function(){
+                $('#footer').load('footer.html');
+           });
+      </script>
+
 <!--  MISSION STATEMENT -->
 <div class="content">
-<div id="box">
-<br><br>
-  <div id="mission">
-    <div class="head"><h1> Our Mission </h1></div>
+<br>
+  <div class="mission">
+    <div class="head"><a class="green">[       </a> Our Mission <a class="green">       ] </a></div><br>
     <div class="text">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Quam viverra orci sagittis eu volutpat odio facilisis mauris. Porta lorem mollis aliquam ut porttitor. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Cursus mattis molestie a iaculis at. Vitae justo eget magna fermentum iaculis eu non diam. Viverra tellus in hac habitasse platea dictumst vestibulum.
   </div>
-  </div>
+</div>
+<br>
 
 <!-- TIMELINE -->
 
-<div class="head"><h1> Our Path </h1></div>
+    <div class="head"><a class="green">[       </a> Our Path <a class="green">       ] </a></div><br>
 <br>
 
 <main>
@@ -347,6 +380,6 @@ body {
 
 </div>
 
-</div>
+<div id="footer"></div>
 
 </html>
