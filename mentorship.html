@@ -159,7 +159,7 @@ body {
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
 <!--link rel="icon" href="logo" /-->
 <!--link rel="apple-touch-icon" href="logo" /-->
-<title>Join Us</title>
+<title>Mentorship 2020</title>
 
 <div class="box">
   <div class="gene">
@@ -177,8 +177,8 @@ body {
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="mentorship.html">Mentorship 2020</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="mentorship.html" class="active">Mentorship 2020</a></li>
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -187,7 +187,7 @@ body {
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="joinus.html"  class="active">Join Us</a></li>
+    <li><a href="joinus.html">Join Us</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
@@ -248,6 +248,96 @@ body {
   border-width: 3px; */
 }
 
+.text {
+  color: var(--secText);
+  padding: 0px;
+  margin: 0px;
+  width: 800px;
+  display: inline-block;
+  text-align: center;
+  font-style: "Hind";
+  padding-bottom: 50px;
+}
+
+.mission{
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+ body {
+	 font-family: 'Hind', sans-serif;
+	 margin: 0;
+}
+ main {
+	 min-width: 500px;
+	 max-width: 700px;
+	 margin: auto;
+}
+ p {
+	 font-size: 1em;
+	 line-height: 1.75em;
+	 border-top: 3px solid;
+	 border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+	 border-image-slice: 1;
+	 border-width: 3px;
+	 margin: 0;
+	 padding: 40px;
+	 counter-increment: section;
+	 position: relative;
+	 color: var(--secText);
+   text-align: left;
+}
+ p:before {
+   font-family: 'Montserrat';
+	 content: counter(section);
+	 position: absolute;
+	 border-radius: 50%;
+	 padding: 10px;
+	 height: 1.25em;
+	 width: 1.25em;
+	 background-color: #34435e;
+	 text-align: center;
+	 line-height: 1.25em;
+	 color: #fff;
+	 font-size: 1em;
+}
+ p:nth-child(odd) {
+	 border-right: 3px solid;
+	 padding-left: 0;
+}
+ p:nth-child(odd):before {
+	 left: 100%;
+	 margin-left: -20px;
+}
+ p:nth-child(even) {
+	 border-left: 3px solid;
+	 padding-right: 0;
+   text-align: right;
+}
+ p:nth-child(even):before {
+	 right: 100%;
+	 margin-right: -20px;
+}
+ p:first-child {
+   border-top: 3px solid;
+   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+   border-image-slice: 1;
+   border-width: 3px;
+	 border-top-right-radius: 0;
+	 border-top-left-radius: 0;
+}
+ p:last-child {
+	 border-bottom-right-radius: 0;
+	 border-bottom-left-radius: 0;
+   border-bottom: 3px solid;
+   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+   border-image-slice: 1;
+   border-width: 3px;
+}
+
+  p .event{
+  font-weight: bold;
+}
 
 </style>
 
@@ -265,12 +355,15 @@ body {
       </script>
 
 <!--  MISSION STATEMENT -->
-<div class="content"><br>
-    <div class="head"><a class="green">[       </a> Sign Up <a class="green">       ] </a></div><br>
-
+<div class="content">
+<br>
+  <div class="mission">
+    <div class="head"><a class="green">[       </a> Our Mission <a class="green">       ] </a></div><br>
+    <div class="text">
+  Our objective is to simulate a free and accessible research and mentorship-based environment for biology-oriented middle schoolers by pairing them with high schoolers who already have research experience. This program teaches students critical problem-solving skills, teamwork, and communication, and offers them a foundation to excel in their high school biology classes and future research opportunities.
+  </div>
 </div>
-
-<!-- <div id="footer"></div> -->
+<br>
 
 
 <div class="footer">
