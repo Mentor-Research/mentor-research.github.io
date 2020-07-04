@@ -204,6 +204,65 @@ body {
 
   <style>
 
+  /* POPUP */
+
+  /* Popup container */
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: white;
+    color: var(secText--);
+    text-align: center;
+    border-radius: 0px;
+    border: 1px solid var(--green);
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    padding: 10px;
+  }
+
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--green) transparent;
+  }
+
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .popuptext .show {
+    visibility: visible;
+    /* -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s; */
+  }
+
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  /* REST */
+
   img{
     border: 3px solid;
     border-image: linear-gradient(to bottom right, var(--dblue) 0%, var(--green) 100%);
@@ -299,7 +358,7 @@ body {
     font-family: 'Montserrat';
     display: inline-block;
     margin: 0px;
-    font-size: 40px;
+    font-size: 30px;
     padding: 30px;
     font-weight: bold;
     color: var(--priText);
@@ -325,51 +384,78 @@ body {
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="jquery.js"></script>
 
     <script>
+
     $(function(){
       $('#footer').load('footer.html');
-      });
-      </script>
+    });
 
-      <!--  MISSION STATEMENT -->
-      <div class="content">
+    // // When the user clicks on <div>, open the popup
+    // function myFunction() {
+    //   var popup = document.getElementById("myPopup");
+    //   popup.classList.toggle("show");
+    // }
+
+    // $('.popup').click(function(){
+    //   $(this)
+    //   .find('.popuptext');  // finds your nested popup div
+    //   .toggle("show");
+    // });
+
+    $(function(){
+
+    $('.popup').click(function(){
+      var popup = $(this).find('.popuptext');
+      popup.toggle("show");
+
+    });
+  });
+
+    </script>
+
+    <!--  MISSION STATEMENT -->
+    <div class="content">
       <br>
       <div class="head"><a class="green">[       </a> Head Team <a class="green">       ] </a></div><br>
 
       <div class="innerbox">
-      <div class="person">
-      <img src="dwai.jpg" alt="jerry">
-      <div class="name">Jerry</div>
-      <div class="position">Lord and Saviour</div>
-      <div class="bio">there is no god. only jerry.</div>
-      </div>
-      <div class="person">
-      <img src="dwai.jpg" alt="jerry">
-      <div class="name">Jerry</div>
-      <div class="position">Lord and Saviour</div>
-      <div class="bio">there is no god. only jerry.</div>
-      </div>
-      <div class="person">
-      <img src="dwai.jpg" alt="jerry">
-      <div class="name">Jerry</div>
-      <div class="position">Lord and Saviour</div>
-      <div class="bio">there is no god. only jerry.</div>
-      </div>
-      <div class="person">
-      <img src="dwai.jpg" alt="jerry">
-      <div class="name">Jerry</div>
-      <div class="position">Lord and Saviour</div>
-      <div class="bio">there is no god. only jerry.</div>
-      </div>
-      <div class="person">
-      <img src="dwai.jpg" alt="jerry">
-      <div class="name">Jerry</div>
-      <div class="position">Lord and Saviour</div>
-      <div class="bio">there is no god. only jerry.</div>
-      </div>
+        <div class="person">
+          <div class="popup">
+            <img src="dwai.jpg" alt="jerry">
+            <span class="popuptext" id="myPopup">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <div class="name">Jerry</div>
+            <div class="position">Lord and Saviour</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="popup">
+            <img src="dwai.jpg" alt="jerry">
+            <span class="popuptext" id="myPopup1">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <div class="name">Jerry</div>
+            <div class="position">Lord and Saviour</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="popup" onclick="myFunction()">
+            <img src="dwai.jpg" alt="jerry">
+            <span class="popuptext" id="myPopup2">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <div class="name">Jerry</div>
+            <div class="position">Lord and Saviour</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="popup" onclick="myFunction()">
+            <img src="dwai.jpg" alt="jerry">
+            <span class="popuptext" id="myPopup3">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <div class="name">Jerry</div>
+            <div class="position">Lord and Saviour</div>
+          </div>
+        </div>
+
 
 
       </div>
@@ -377,53 +463,53 @@ body {
       <div class="head"><a class="green">[       </a> Mentors <a class="green">       ] </a></div><br>
 
       <div class="innerbox2">
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name curr">do</div>
-      </div>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name curr">not</div>
-      </div>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name curr">resist.</div>
-      </div>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name curr">you</div>
-      </div><br>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name">cannot</div>
-      </div>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name">win.</div>
-      </div>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name">just</div>
-      </div>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name">submit.</div>
-      </div>
-      <div class="mentor person">
-      <img class="mentor" src="dwai.jpg" alt="jerry">
-      <div class="mentor name">submit.</div>
-      </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name curr">do</div>
+        </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name curr">not</div>
+        </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name curr">resist.</div>
+        </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name curr">you</div>
+        </div><br>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name">cannot</div>
+        </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name">win.</div>
+        </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name">just</div>
+        </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name">submit.</div>
+        </div>
+        <div class="mentor person">
+          <img class="mentor" src="dwai.jpg" alt="jerry">
+          <div class="mentor name">submit.</div>
+        </div>
 
 
       </div>
 
-      </div>
-      <!-- <div id="footer"></div> -->
+    </div>
+     <!-- <div id="footer"></div> -->
 
 
-      <div class="footer">
+    <div class="footer">
 
       <div class="p">  &copy GENErationZ 2020</div>
-      </div>
+    </div>
 
-      </html>
+    </html>
