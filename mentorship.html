@@ -127,30 +127,30 @@ body {
   cursor: pointer;
 }
 
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
-  .button:hover span {
-    padding-right: 25px;
-  }
+.button:hover span {
+  padding-right: 25px;
+}
 
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 </style>
 
@@ -165,11 +165,11 @@ body {
   <div class="gene">
     <h1>GENErationZ</h1>
   </div>
-<br>
+  <br>
 
-<a href="joinus.html" class="button"><span>
-  Register
-</span>  </a>
+  <a href="joinus.html" class="button"><span>
+    Register
+  </span>  </a>
 
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
     <div class="container-fluid">
@@ -178,7 +178,7 @@ body {
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="mentorship.html" class="active">Mentorship 2020</a></li>
-        <li><a href="services.html">Services</a></li>
+
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -187,7 +187,7 @@ body {
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="joinus.html">Join Us</a></li>
+    <li><a href="joinus.html">Apply</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
@@ -200,144 +200,170 @@ body {
 
   </html>
 
-<html>
+  <html>
 
-<style>
+  <style>
 
-.p {
- color: white;
- text-align:center;
-}
+  .contain{
+    text-align: left;
+    border: 3px solid;
+    border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 20px;
+  }
 
-.footer{
- position: relative;
- text-align: center;
- bottom: 0px;
- width: 100%;
- background-color: #333;
- padding-top: 30px;
- padding-bottom: 30px;
-}
+  .warn {
+    color: red;
+    font-size: 20px;
+  }
 
-.content{
-  background: white;
-  margin: 0px;
-  width: 100%;
-  padding: 0px;
-  padding-bottom: 50px;
-  display: inline-block;
-  text-align: center;
-}
+  .p {
+    color: white;
+    text-align:center;
+  }
 
-.head .green{
-  color: var(--green);
-}
+  .footer{
+    position: relative;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    background-color: #333;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 
-.head {
-  white-space: pre;
-  font-family: 'Montserrat';
-  display: inline-block;
-  margin: 0px;
-  font-size: 30px;
-  padding: 30px;
+  .content{
+    background: white;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .head .green{
+    color: var(--green);
+  }
+
+  .head {
+    white-space: pre;
+    font-family: 'Montserrat';
+    display: inline-block;
+    margin: 0px;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: bold;
+    color: var(--priText);
+    /* border-top: 3px solid;
+    border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+    border-image-slice: 1;
+    border-width: 3px; */
+  }
+
+  .text2{
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .text {
+    color: var(--secText);
+    padding: 0px;
+    margin: 0px;
+    width: 800px;
+    display: inline-block;
+    text-align: center;
+    font-style: "Hind";
+    padding-bottom: 50px;
+  }
+
+  .mission{
+    padding-bottom: 20px;
+    display: inline-block;
+  }
+
+.des .h{
   font-weight: bold;
-  color: var(--priText);
-  /* border-top: 3px solid;
-  border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
-  border-image-slice: 1;
-  border-width: 3px; */
-}
-
-.text {
-  color: var(--secText);
-  padding: 0px;
-  margin: 0px;
-  width: 800px;
+  text-align: left;
   display: inline-block;
-  text-align: center;
-  font-style: "Hind";
-  padding-bottom: 50px;
+
 }
 
-.mission{
-  padding-bottom: 20px;
-  display: inline-block;
+.des{
+  text-align: left;
 }
 
- body {
-	 font-family: 'Hind', sans-serif;
-	 margin: 0;
-}
- main {
-	 min-width: 500px;
-	 max-width: 700px;
-	 margin: auto;
-}
- p {
-	 font-size: 1em;
-	 line-height: 1.75em;
-	 border-top: 3px solid;
-	 border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
-	 border-image-slice: 1;
-	 border-width: 3px;
-	 margin: 0;
-	 padding: 40px;
-	 counter-increment: section;
-	 position: relative;
-	 color: var(--secText);
-   text-align: left;
-}
- p:before {
-   font-family: 'Montserrat';
-	 content: counter(section);
-	 position: absolute;
-	 border-radius: 50%;
-	 padding: 10px;
-	 height: 1.25em;
-	 width: 1.25em;
-	 background-color: #34435e;
-	 text-align: center;
-	 line-height: 1.25em;
-	 color: #fff;
-	 font-size: 1em;
-}
- p:nth-child(odd) {
-	 border-right: 3px solid;
-	 padding-left: 0;
-}
- p:nth-child(odd):before {
-	 left: 100%;
-	 margin-left: -20px;
-}
- p:nth-child(even) {
-	 border-left: 3px solid;
-	 padding-right: 0;
-   text-align: right;
-}
- p:nth-child(even):before {
-	 right: 100%;
-	 margin-right: -20px;
-}
- p:first-child {
-   border-top: 3px solid;
-   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
-   border-image-slice: 1;
-   border-width: 3px;
-	 border-top-right-radius: 0;
-	 border-top-left-radius: 0;
-}
- p:last-child {
-	 border-bottom-right-radius: 0;
-	 border-bottom-left-radius: 0;
-   border-bottom: 3px solid;
-   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
-   border-image-slice: 1;
-   border-width: 3px;
-}
+  .cal{
+    border: 3px solid;
+    color: white;
+    width: 70%;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid var(--dgreen);
+    color: white;
+    border-radius: 10px;
+    padding: 6px;
+  }
 
-  p .event{
-  font-weight: bold;
-}
+  .greenm{
+    border: 3px white;
+    background-color: var(--dgreen);
+    color: white;
+    width: auto;
+    text-align: center;
+    border: 2px solid var(--dgreen);
+    padding: 30px;
+  }
+
+  .greenb{
+    border: 3px white;
+    background-color: var(--dgreen);
+    color: white;
+    width: auto;
+    text-align: center;
+    border: 2px solid var(--dgreen);
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .white{
+    border: 3px white;
+    background-color: white;
+    color: var(--dgreen);
+    width: auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+
+  }
+
+  .dates{
+    border-radius: 5px;
+    color: var(--dgreen);
+    font-size: 15px;
+    padding: 2px;
+    width: 50px;
+    background: white;
+    display: inline-block;
+    text-align: center;
+    box-shadow: -2px 2px 1px grey;
+  }
+
+  .datesg{
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    padding: 2px;
+    width: 50px;
+    background: var(--dgreen);
+    display: inline-block;
+    text-align: center;
+    box-shadow: -2px 2px 1px grey;
+  }
+
 
 </style>
 
@@ -349,19 +375,104 @@ body {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <script>
-           $(function(){
-                $('#footer').load('footer.html');
-           });
-      </script>
+$(function(){
+  $('#footer').load('footer.html');
+});
+</script>
 
 <!--  MISSION STATEMENT -->
 <div class="content">
-<br>
+  <br>
   <div class="mission">
-    <div class="head"><a class="green">[       </a> Our Mission <a class="green">       ] </a></div><br>
+    <div class="warn"><br>
+      Due to current, unprecedented circumstances, mentorship 2020 will be held through online sessions in Zoom every Saturday for 1 hour.
+    <br><br></div>
+    <div class="head"><a class="green">[       </a> Overall Structure <a class="green">       ] </a></div><br>
     <div class="text">
-  Our objective is to simulate a free and accessible research and mentorship-based environment for biology-oriented middle schoolers by pairing them with high schoolers who already have research experience. This program teaches students critical problem-solving skills, teamwork, and communication, and offers them a foundation to excel in their high school biology classes and future research opportunities.
+      <br> Each of our highly-qualified and trained mentors will work a small group of participants, guiding them in a collaborative setting to understand biological concepts and formulate research questions through interactive experiments.
+      <br><br>  To allow participants to explore which aspect of biology they are most interested in, we will facilitate a rotation system of 4 major topics in biology, which will extend throughout the first 8 weeks of the program (2 weeks per topic/lab). This exposure to various topics will act as a stepping stone to later guide their personalized group research project.
+      <br><br><br><div class="contain">
+         The 4 topics will include:
+        <br><br> <div class="text2"> Ecology: </div><br>  &emsp; Learning and analyzing how the natural ecological environment and competition between organisms affect <br>&emsp; barnacle and bacterial populations.
+        <br><br> <div class="text2"> Bacterial Transformation: </div><br>  &emsp;  Learning how to make bacteria fluoresce by inserting plasmids in DNA via bacterial transformation.
+        <br><br>  <div class="text2"> Immunology and Epidemiology: </div><br> &emsp;  Learning about coronaviruses, how it spreads, and how to prevent transmission through mock labs and <br>&emsp; activities.
+        <br><br>  <div class="text2"> Evolution: </div><br> &emsp;  Learning about the evolutionary relationships of various organisms’  nucleotide sequences and their <br>&emsp; ancestors using BLAST (Basic Local Alignment Search Tool) created by NIH
+      </div>
+      <br><br>  For the last 4 sessions of the program, mentors will assist participants to write a formal research paper, which we will post on our website at the end of the program.
+
+      On the last day of the program, one representative of each group will share their research question with everyone, and later we will have a guest speaker who will engage participants in various biology-related topics and current research. They will also be open to answering any questions you may have about high school or STEM in general.
+
+    </div>
   </div>
+
+<div class="cal">
+  <div class="greenb">
+  <div class="des"><div class="des h">ORIENTATION:</div> These sessions... </div><br>
+
+  <div class ="dates">
+    SEPT<br>5th
+  </div>
+</div>
+
+<div class="white">
+<div class="des"><div class="des h">SESSIONS:</div> These sessions... </div><br>
+
+<div class ="datesg">
+  SEPT<br>12th
+</div>
+<div class ="datesg">
+  SEPT<br>19th
+</div>
+<div class ="datesg">
+  SEPT<br>26th
+</div>
+<div class ="datesg">
+  OCT<br>3rd
+</div>
+<div class ="datesg">
+  OCT<br>10th
+</div>
+<div class ="datesg">
+  OCT<br>17th
+</div>
+<div class ="datesg">
+  OCT<br>24th
+</div>
+<div class ="datesg">
+  OCT<br>31th
+</div>
+</div>
+
+
+<div class="greenm">
+<div class="des"><div class="des h">RESEARCH SESSIONS:</div> These sessions... </div><br>
+
+<div class ="dates">
+  NOV<br>7th
+</div>
+<div class ="dates">
+  NOV<br>14th
+</div>
+<div class ="dates">
+  NOV<br>21th
+</div>
+<div class ="dates">
+  DEC<br>5th
+</div>
+
+</div>
+
+<div class="white">
+<div class="des"><div class="des h">SYMPOSIUM:</div> These sessions... </div><br>
+
+<div class ="datesg">
+  DEC<br>12th
+</div>
+
+</div>
+
+</div>
+
 </div>
 <br>
 
@@ -369,6 +480,6 @@ body {
 <div class="footer">
 
   <div class="p">  &copy GENErationZ 2020</div>
-  </div>
+</div>
 
 </html>

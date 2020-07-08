@@ -178,7 +178,7 @@ body {
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="mentorship.html">Mentorship 2020</a></li>
-        <li><a href="services.html">Services</a></li>
+
         <li><a href="team.html" class="active">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -187,7 +187,7 @@ body {
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="joinus.html">Join Us</a></li>
+    <li><a href="joinus.html">Apply</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
@@ -213,10 +213,16 @@ body {
     cursor: pointer;
   }
 
+  .popup .popuptext .show {
+    display: inline-block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
   /* The actual popup (appears on top) */
   .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
+    display: none;
+    width: 200px;
     background-color: white;
     color: var(secText--);
     text-align: center;
@@ -224,10 +230,9 @@ body {
     border: 1px solid var(--green);
     position: absolute;
     z-index: 1;
-    width: 120px;
     top: 100%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -105px;
     padding: 10px;
   }
 
@@ -244,11 +249,6 @@ body {
   }
 
   /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .popuptext .show {
-    visibility: visible;
-    /* -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s; */
-  }
 
   /* Add animation (fade in the popup) */
   @-webkit-keyframes fadeIn {
@@ -386,7 +386,7 @@ body {
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script src="jquery.js"></script>
+    <script src="jquery.js"></script>
 
     <script>
 
@@ -394,26 +394,14 @@ body {
       $('#footer').load('footer.html');
     });
 
-    // // When the user clicks on <div>, open the popup
-    // function myFunction() {
-    //   var popup = document.getElementById("myPopup");
-    //   popup.classList.toggle("show");
-    // }
-
-    // $('.popup').click(function(){
-    //   $(this)
-    //   .find('.popuptext');  // finds your nested popup div
-    //   .toggle("show");
-    // });
 
     $(function(){
 
-    $('.popup').click(function(){
-      var popup = $(this).find('.popuptext');
-      popup.toggle("show");
-
+      $('.popup').hover(function(){
+        var popup = $(this).find('.popuptext');
+        popup.toggle("show");
+      });
     });
-  });
 
     </script>
 
@@ -426,7 +414,7 @@ body {
         <div class="person">
           <div class="popup">
             <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext" id="myPopup">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
             <div class="name">Jerry</div>
             <div class="position">Lord and Saviour</div>
           </div>
@@ -434,23 +422,31 @@ body {
         <div class="person">
           <div class="popup">
             <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext" id="myPopup1">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
             <div class="name">Jerry</div>
             <div class="position">Lord and Saviour</div>
           </div>
         </div>
         <div class="person">
-          <div class="popup" onclick="myFunction()">
+          <div class="popup">
             <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext" id="myPopup2">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
             <div class="name">Jerry</div>
             <div class="position">Lord and Saviour</div>
           </div>
         </div>
         <div class="person">
-          <div class="popup" onclick="myFunction()">
+          <div class="popup">
             <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext" id="myPopup3">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+            <div class="name">Jerry</div>
+            <div class="position">Lord and Saviour</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="popup">
+            <img src="dwai.jpg" alt="jerry">
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
             <div class="name">Jerry</div>
             <div class="position">Lord and Saviour</div>
           </div>
@@ -464,47 +460,74 @@ body {
 
       <div class="innerbox2">
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name curr">do</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name curr">do</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name curr">not</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name curr">do</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name curr">resist.</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name curr">do</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name curr">you</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name curr">do</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div><br>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name">cannot</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name">cannot</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name">win.</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name">cannot</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name">just</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name">cannot</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name">submit.</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name">cannot</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
         <div class="mentor person">
-          <img class="mentor" src="dwai.jpg" alt="jerry">
-          <div class="mentor name">submit.</div>
+          <div class="popup">
+            <img class="mentor" src="dwai.jpg" alt="jerry">
+            <div class="mentor name">cannot</div>
+            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
+          </div>
         </div>
 
 
       </div>
 
     </div>
-     <!-- <div id="footer"></div> -->
+     <div id="footer"></div>
 
 
     <div class="footer">

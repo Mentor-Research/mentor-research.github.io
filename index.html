@@ -14,6 +14,17 @@
   --dgreen: #29A699;
 }
 
+.sticky {
+   position: fixed;
+   top: 0px;
+   width: 100%;
+ }
+
+ .sticky + .content {
+   padding-top: 60px;
+ }
+
+
 .nav.navbar-nav li{
   font-size: 15px;
   text-align: center;
@@ -154,9 +165,33 @@ body {
 
 </style>
 
+<script>
+
+window.onscroll = function() {scroll()};
+
+// Get the navbar
+var navbar = document.getElementById("nav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function scroll() {
+  if (window.pageYOffset >= sticky) {
+    navbar.add("sticky")
+  } else {
+    navbar.remove("sticky");
+  }
+}
+
+</script>
+
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <!--link rel="icon" href="logo" /-->
 <!--link rel="apple-touch-icon" href="logo" /-->
 <title>GENErationZ</title>
@@ -171,6 +206,7 @@ body {
   Register
 </span>  </a>
 
+<div id="nav">
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
     <div class="container-fluid">
     </div>
@@ -178,7 +214,6 @@ body {
       <ul class="nav navbar-nav">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="mentorship.html">Mentorship 2020</a></li>
-        <li><a href="services.html">Services</a></li>
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -187,12 +222,14 @@ body {
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="joinus.html">Join Us</a></li>
+    <li><a href="joinus.html">Apply</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
 </div>
 </nav>
+
+</div>
 
 <video autoplay muted loop id="myVideo">
   <source src="720p.mp4" type="video/mp4">
@@ -276,6 +313,11 @@ hr{
 
 .event{
   font-weight: bold;
+  font-size: 20px;
+}
+
+.event2{
+  font-weight:bold;
 }
 
 .mission{
@@ -323,6 +365,7 @@ hr{
  p:nth-child(odd) {
 	 border-right: 3px solid;
 	 padding-left: 0;
+   text-align: right;
 }
  p:nth-child(odd):before {
 	 left: 100%;
@@ -331,7 +374,7 @@ hr{
  p:nth-child(even) {
 	 border-left: 3px solid;
 	 padding-right: 0;
-   text-align: right;
+   text-align: left;
 }
  p:nth-child(even):before {
 	 right: 100%;
@@ -401,7 +444,7 @@ Our team encountered their first biology research project in high school. In jus
   <div class="text">
     In light of recent circumstances, we have decided that GeneZ will be virtual for the time being. Nevertheless, we seek to provide a complete experience for every one of our students. By the end of the program, students will have done their very own research project in a topic they are passionate towards. Additionally, a representative speaker will make an appearance towards the end of the program to discuss future job/research opportunities and answer any remaining questions students have about a research career. To read more, please visit our <a href="mentorship.html">2020 Agenda page</a>.
     <br><br><br>
-  <a class="event">If you are a 7th or 8th grader and are interested in applying, please do so on our <a href="joinus">application page</a>!</a>
+  <a class="event2">If you are a 7th or 8th grader and are interested in applying, please do so on our <a href="joinus">application page</a>!</a>
 </div>
 </div>
 <br>
@@ -414,13 +457,13 @@ Our team encountered their first biology research project in high school. In jus
 <main>
   <p>
     <a class="event">Birth of the idea</a><br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </p>
     <p><a class="event">Forming the team</a><br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </p>
     <p><a class="event">Program kick-off</a><br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </p>
     <p><a class="event">Research symposium</a><br>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </p>
 </main>
 
 </div>
