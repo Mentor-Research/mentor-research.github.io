@@ -1,131 +1,142 @@
 <!DOCTYPE html>
 
 <html>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
-  :root {
-    --priText:  #294273;
-    --secText: #3B3B47;
-    --purple: #7D3FA6;
-    --dblue: #35278C;
-    --blue: #418FBF;
-    --green: #82D9D9;
-    --dgreen: #29A699;
-  }
+:root {
+  --priText:  #294273;
+  --secText: #3B3B47;
+  --purple: #7D3FA6;
+  --dblue: #35278C;
+  --blue: #418FBF;
+  --green: #82D9D9;
+  --dgreen: #29A699;
+}
 
-  .nav.navbar-nav li{
-    font-size: 15px;
-    text-align: center;
-    display:inline;
-    font-family: 'Montserrat';
-  }
+/* .sticky {
+   position: fixed;
+   top: 0px;
+   width: 100%;
+ }
 
-  .nav.navbar-nav {
-    text-align: center;
-    display: block;
-    width: 100%;
-    margin: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
-  /* Style the links inside the navigation bar */
-  .nav.navbar-nav a {
-    display:inline-block;
-    color: gray;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
-  /* Change the color of links on hover */
-  .nav.navbar-nav a:hover {
-    color: black;
-  }
-
-  /* Add a color to the active/current link */
-  .nav.navbar-nav a:active {
-    color: black;
-    font-weight: bold;
-  }
-
-  .nav.navbar-nav .active {
-    color: black;
-    font-weight: bold;
-  }
-
-  ul {
-    list-style-type: none;
-    overflow: hidden;
-    background-color: var(--green);
-    text-align:center;
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    padding: 0px;
-    margin: 0px;
-  }
-
-  ul li{
-    margin-left: auto;
-    margin-right: auto;
-  }
+ .sticky + .content {
+   padding-top: 60px;
+ } */
 
 
-  .box{
-    text-align: center;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-  }
+.nav.navbar-nav li{
+  font-size: 1.3vw;
+  text-align: center;
+  display:inline;
+  font-family: 'Montserrat';
+}
 
-  body {
-    font-family: 'Hind', sans-serif;
-    padding: 0;
-    margin: 0;
-  }
+.nav.navbar-nav {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
-  .gene {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    width: auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 30px;
-    text-align: center;
-    display: inline-block;
-    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
-    border-radius: 100px;
-    z-index: -1;
-    margin-bottom: 0px;
-    margin-top: 50px;
-    border: none;
-  }
+/* Style the links inside the navigation bar */
+.nav.navbar-nav a {
+  display:inline-block;
+  color: gray;
+  padding: 1.4vw 1.6vw;
+  text-decoration: none;
+  font-size: 1.3vw;
+}
 
-  #myVideo{
-    display: block;
-    position: fixed;
-    padding: 0px;
-    top: 0px;
-    left: 0px;
-    height: auto;
-    width: 100%;
-    z-index: -1;
-  }
+/* Change the color of links on hover */
+.nav.navbar-nav a:hover {
+  color: black;
+}
 
-  .button {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 15px 32px;
-    border-radius: 10px;
-    text-align: center;
-    display: inline-block;
-    font-size: 20px;
-    margin-bottom: 30px;
-    font-family: 'Hind';
-    cursor: pointer;
-  }
+/* Add a color to the active/current link */
+.nav.navbar-nav a:active {
+  color: black;
+  font-weight: bold;
+}
+
+.nav.navbar-nav .active {
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--green);
+  text-align:center;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul li{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.box{
+  text-align: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.gene {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  z-index: -1;
+  margin-bottom: 0px;
+  /* margin-top: 50px; */
+  border: none;
+}
+
+#myVideo{
+  display: block;
+  position: fixed;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 1.5vw 3.2vw;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.7vw;
+  margin-bottom: 30px;
+  font-family: 'Hind';
+  cursor: pointer;
+}
 
   .button span {
     cursor: pointer;
@@ -144,7 +155,7 @@
   }
 
   .button:hover span {
-    padding-right: 25px;
+    padding-right: 2.5vw;
   }
 
   .button:hover span:after {
@@ -154,23 +165,49 @@
 
 </style>
 
+<script>
+
+window.onscroll = function() {scroll()};
+
+// Get the navbar
+var navbar = document.getElementById("nav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function scroll() {
+  if (window.pageYOffset >= sticky) {
+    navbar.add("sticky")
+  } else {
+    navbar.remove("sticky");
+  }
+}
+
+</script>
+
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
-<!--link rel="icon" href="logo" /-->
-<!--link rel="apple-touch-icon" href="logo" /-->
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="Z_white4.png" >
+<link rel="apple-touch-icon" href="Z.jpg">
 <title>Contact Us</title>
 
 <div class="box">
-  <div class="gene">
-    <h1>GENErationZ</h1>
+  <div class="gene"><br>
+    <!-- <h1>GENErationZ</h1> -->
+    <img src="full_white.png" width="500px" alt="GENErationZ"></img>
   </div>
-  <br>
+<br>
 
-  <a href="joinus.html" class="button"><span>
-    Register
-  </span>  </a>
+<a href="apply.html" class="button"><span>
+  Register
+</span>  </a><br><br>
 
+<div id="nav">
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
     <div class="container-fluid">
     </div>
@@ -178,7 +215,6 @@
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="mentorship.html">Mentorship 2020</a></li>
-
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -187,20 +223,19 @@
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="joinus.html">Apply</a></li>
+    <li><a href="apply.html">Apply</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
 </div>
 </div>
 </nav>
 
-<video autoplay muted loop id="myVideo">
+</div>
+
+<video playsinline autoplay muted loop id="myVideo">
   <source src="720p.mp4" type="video/mp4">
   </video>
 
-  </html>
-
-  <html>
 
   <style>
 
@@ -352,11 +387,11 @@
       <br>
       <div class="head"><a class="green">[       </a> Contact Us <a class="green">       ] </a></div><br>
 
-    We look forward to hearing from you! Thank you for your interest in GENErationZ. We'll get back to you as soon as possible!<br><br>
+    Thank you for your interest in GENErationZ! We look forward to hearing from you, and we'll get back to you as soon as possible!<br><br>
 
         <h4>Our Email: <a href="mailto:usgenerationz@gmail.com">usgenerationz@gmail.com</a></h4><br>
 
-        <embed type="text/html" src="formpage.html"  width="800" height="700">
+        <!-- <embed type="text/html" src="formpage.html"  width="800" height="700"> -->
 
         <!-- <form method="post" action="mailto:mentorresearch@gmail.com" enctype="text/plain" id="form">
           <div class="col">

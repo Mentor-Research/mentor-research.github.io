@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 :root {
@@ -14,8 +14,19 @@
   --dgreen: #29A699;
 }
 
+/* .sticky {
+   position: fixed;
+   top: 0px;
+   width: 100%;
+ }
+
+ .sticky + .content {
+   padding-top: 60px;
+ } */
+
+
 .nav.navbar-nav li{
-  font-size: 15px;
+  font-size: 1.3vw;
   text-align: center;
   display:inline;
   font-family: 'Montserrat';
@@ -34,9 +45,9 @@
 .nav.navbar-nav a {
   display:inline-block;
   color: gray;
-  padding: 14px 16px;
+  padding: 1.4vw 1.6vw;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.3vw;
 }
 
 /* Change the color of links on hover */
@@ -57,14 +68,13 @@
 
 ul {
   list-style-type: none;
-  margin: 1px;
   overflow: hidden;
   background-color: var(--green);
   text-align:center;
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 5px;
+  padding: 0px;
   margin: 0px;
 }
 
@@ -92,14 +102,14 @@ body {
   color: white;
   width: auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 2.5vw;
   text-align: center;
   display: inline-block;
   box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
   border-radius: 100px;
   z-index: -1;
   margin-bottom: 0px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   border: none;
 }
 
@@ -118,11 +128,11 @@ body {
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  padding: 15px 32px;
+  padding: 1.5vw 3.2vw;
   border-radius: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.7vw;
   margin-bottom: 30px;
   font-family: 'Hind';
   cursor: pointer;
@@ -145,7 +155,7 @@ body {
   }
 
   .button:hover span {
-    padding-right: 25px;
+    padding-right: 2.5vw;
   }
 
   .button:hover span:after {
@@ -155,31 +165,56 @@ body {
 
 </style>
 
+<script>
+
+window.onscroll = function() {scroll()};
+
+// Get the navbar
+var navbar = document.getElementById("nav");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function scroll() {
+  if (window.pageYOffset >= sticky) {
+    navbar.add("sticky")
+  } else {
+    navbar.remove("sticky");
+  }
+}
+
+</script>
+
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
-<!--link rel="icon" href="logo" /-->
-<!--link rel="apple-touch-icon" href="logo" /-->
-<title>GENErationZ</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="Z_white4.png" >
+<link rel="apple-touch-icon" href="Z.jpg">
+<title>Apply</title>
 
 <div class="box">
-  <div class="gene">
-    <h1>GENErationZ</h1>
+  <div class="gene"><br>
+    <!-- <h1>GENErationZ</h1> -->
+    <img src="full_white.png" width="500px" alt="GENErationZ"></img>
   </div>
 <br>
 
-<a href="joinus.html" class="button"><span>
+<a href="apply.html" class="button"><span>
   Register
-</span>  </a>
+</span>  </a><br><br>
 
+<div id="nav">
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
     <div class="container-fluid">
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="mentorship.html">Mentorship 2020</a></li>
-
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -188,15 +223,96 @@ body {
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="joinus.html">Join Us</a></li>
+    <li><a href="apply.html" class="active">Apply</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
 </div>
 </nav>
 
+</div>
+
 <video playsinline autoplay muted loop id="myVideo">
   <source src="720p.mp4" type="video/mp4">
   </video>
 
-  </html>
+
+<style>
+
+.p {
+ color: white;
+ text-align:center;
+}
+
+.footer{
+ position: relative;
+ text-align: center;
+ bottom: 0px;
+ width: 100%;
+ background-color: #333;
+ padding-top: 30px;
+ padding-bottom: 30px;
+}
+
+.content{
+  background: white;
+  margin: 0px;
+  width: 100%;
+  padding: 0px;
+  padding-bottom: 50px;
+  display: inline-block;
+  text-align: center;
+}
+
+.head .green{
+  color: var(--green);
+}
+
+.head {
+  white-space: pre;
+  font-family: 'Montserrat';
+  display: inline-block;
+  margin: 0px;
+  font-size: 30px;
+  padding: 30px;
+  font-weight: bold;
+  color: var(--priText);
+  /* border-top: 3px solid;
+  border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+  border-image-slice: 1;
+  border-width: 3px; */
+}
+
+
+</style>
+
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<script>
+           $(function(){
+                $('#footer').load('footer.html');
+           });
+      </script>
+
+<!--  MISSION STATEMENT -->
+<div class="content"><br>
+    <div class="head"><a class="green">[       </a> Sign Up <a class="green">       ] </a></div><br><br>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJT4fUtKis0xSVfJstZUwf2evhbf9cSiXGhMUPvjj_08ChiA/viewform?embedded=true" width="640" height="1730" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+</div>
+
+<!-- <div id="footer"></div> -->
+
+
+<div class="footer">
+
+  <div class="p">  &copy GENErationZ 2020</div>
+  </div>
+
+</html>

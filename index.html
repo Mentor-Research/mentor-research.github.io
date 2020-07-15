@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 :root {
@@ -14,7 +14,7 @@
   --dgreen: #29A699;
 }
 
-.sticky {
+/* .sticky {
    position: fixed;
    top: 0px;
    width: 100%;
@@ -22,11 +22,11 @@
 
  .sticky + .content {
    padding-top: 60px;
- }
+ } */
 
 
 .nav.navbar-nav li{
-  font-size: 15px;
+  font-size: 1.3vw;
   text-align: center;
   display:inline;
   font-family: 'Montserrat';
@@ -45,9 +45,9 @@
 .nav.navbar-nav a {
   display:inline-block;
   color: gray;
-  padding: 14px 16px;
+  padding: 1.4vw 1.6vw;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.3vw;
 }
 
 /* Change the color of links on hover */
@@ -102,14 +102,14 @@ body {
   color: white;
   width: auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 2.5vw;
   text-align: center;
   display: inline-block;
   box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
   border-radius: 100px;
   z-index: -1;
   margin-bottom: 0px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   border: none;
 }
 
@@ -128,11 +128,11 @@ body {
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  padding: 15px 32px;
+  padding: 1.5vw 3.2vw;
   border-radius: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.7vw;
   margin-bottom: 30px;
   font-family: 'Hind';
   cursor: pointer;
@@ -155,7 +155,7 @@ body {
   }
 
   .button:hover span {
-    padding-right: 25px;
+    padding-right: 2.5vw;
   }
 
   .button:hover span:after {
@@ -192,19 +192,20 @@ function scroll() {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<!--link rel="icon" href="logo" /-->
-<!--link rel="apple-touch-icon" href="logo" /-->
+<link rel="icon" href="Z_white4.png" >
+<link rel="apple-touch-icon" href="Z.jpg">
 <title>GENErationZ</title>
 
 <div class="box">
-  <div class="gene">
-    <h1>GENErationZ</h1>
+  <div class="gene"><br>
+    <!-- <h1>GENErationZ</h1> -->
+    <img src="full_white.png" width="500px" alt="GENErationZ"></img>
   </div>
 <br>
 
-<a href="joinus.html" class="button"><span>
+<a href="apply.html" class="button"><span>
   Register
-</span>  </a>
+</span>  </a><br><br>
 
 <div id="nav">
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
@@ -222,7 +223,7 @@ function scroll() {
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="joinus.html">Apply</a></li>
+    <li><a href="apply.html">Apply</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
@@ -231,13 +232,10 @@ function scroll() {
 
 </div>
 
-<video autoplay muted loop id="myVideo">
+<video playsinline autoplay muted loop id="myVideo">
   <source src="720p.mp4" type="video/mp4">
   </video>
 
-  </html>
-
-<html>
 
 <style>
 
@@ -251,13 +249,13 @@ hr{
 }
 
 .head1{
-  font-size: 50px;
+  font-size: 3.5vw;
   font-weight: bold;
   color: var(--dblue);
 }
 
 .head2{
-  font-size: 30px;
+  font-size: 2.3vw;
   color: var(--green);
 }
 
@@ -267,8 +265,8 @@ hr{
  bottom: 0px;
  width: 100%;
  background-color: #333;
- padding-top: 30px;
- padding-bottom: 30px;
+ padding-top: 3vw;
+ padding-bottom: 3vw;
 }
 
 .content{
@@ -276,9 +274,10 @@ hr{
   margin: 0px;
   width: 100%;
   padding: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 5vw;
   display: inline-block;
   text-align: center;
+  wrap: auto;
 }
 
 .head .green{
@@ -290,8 +289,8 @@ hr{
   font-family: 'Montserrat';
   display: inline-block;
   margin: 0px;
-  font-size: 30px;
-  padding: 30px;
+  font-size: 2.5vw;
+  padding: 3vw;
   font-weight: bold;
   color: var(--priText);
   /* border-top: 3px solid;
@@ -302,18 +301,18 @@ hr{
 
 .text {
   color: var(--secText);
-  padding: 0px;
   margin: 0px;
-  width: 800px;
+  width: 70%;
   display: inline-block;
   text-align: center;
   font-style: "Hind";
-  padding-bottom: 50px;
+  padding-bottom: 5vw;
+  font-size: 1.2vw;
 }
 
 .event{
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.4vw;
 }
 
 .event2{
@@ -321,7 +320,7 @@ hr{
 }
 
 .mission{
-  padding-bottom: 20px;
+  padding-bottom: 2vw;
   display: inline-block;
 }
 
@@ -330,19 +329,19 @@ hr{
 	 margin: 0;
 }
  main {
-	 min-width: 500px;
-	 max-width: 700px;
+	 min-width: 40%;
+	 max-width: 50%;
 	 margin: auto;
 }
  p {
-	 font-size: 1em;
+	 font-size: 1.2vw;
 	 line-height: 1.75em;
 	 border-top: 3px solid;
 	 border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
 	 border-image-slice: 1;
 	 border-width: 3px;
 	 margin: 0;
-	 padding: 40px;
+	 padding: 4vw;
 	 counter-increment: section;
 	 position: relative;
 	 color: var(--secText);
@@ -353,14 +352,14 @@ hr{
 	 content: counter(section);
 	 position: absolute;
 	 border-radius: 50%;
-	 padding: 10px;
+	 padding: 1vw;
 	 height: 1.25em;
 	 width: 1.25em;
 	 background-color: #34435e;
 	 text-align: center;
 	 line-height: 1.25em;
 	 color: #fff;
-	 font-size: 1em;
+	 font-size: 1.2vw;
 }
  p:nth-child(odd) {
 	 border-right: 3px solid;
@@ -442,9 +441,9 @@ Our team encountered their first biology research project in high school. In jus
 <div class="mission">
   <div class="head"><a class="green">[       </a> Our Initiative <a class="green">       ] </a></div><br>
   <div class="text">
-    In light of recent circumstances, we have decided that GeneZ will be virtual for the time being. Nevertheless, we seek to provide a complete experience for every one of our students. By the end of the program, students will have done their very own research project in a topic they are passionate towards. Additionally, a representative speaker will make an appearance towards the end of the program to discuss future job/research opportunities and answer any remaining questions students have about a research career. To read more, please visit our <a href="mentorship.html">2020 Agenda page</a>.
+    In light of recent circumstances, we have decided that GENErationZ will be virtual for the time being. Nevertheless, we seek to provide a complete experience for every one of our students. By the end of the program, students will have completed their very own research project and scientific research paper on a topic they are passionate about. Additionally, a representative speaker will make an appearance towards the end of the program to discuss future job/research opportunities and answer any remaining questions students have about a research career. To learn more, please visit our <a href="mentorship.html">Mentorship 2020 page</a>.
     <br><br><br>
-  <a class="event2">If you are a 7th or 8th grader and are interested in applying, please do so on our <a href="joinus">application page</a>!</a>
+  <a class="event2">If you are a 7th or 8th grader and are interested in applying, please do so <a href="apply.html">here</a>!</a>
 </div>
 </div>
 <br>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 :root {
@@ -14,16 +14,32 @@
   --dgreen: #29A699;
 }
 
+/* .sticky {
+position: fixed;
+top: 0px;
+width: 100%;
+}
+
+.sticky + .content {
+padding-top: 60px;
+} */
+
+
 .nav.navbar-nav li{
-  font-size: 15px;
+  font-size: 1.3vw;
   text-align: center;
   display:inline;
   font-family: 'Montserrat';
 }
 
+#nav{
+  position:sticky;
+}
+
 .nav.navbar-nav {
   text-align: center;
   display: block;
+  position: sticky;
   width: 100%;
   margin: 0px;
   margin-left: 0px;
@@ -34,9 +50,9 @@
 .nav.navbar-nav a {
   display:inline-block;
   color: gray;
-  padding: 14px 16px;
+  padding: 1.4vw 1.6vw;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.3vw;
 }
 
 /* Change the color of links on hover */
@@ -91,14 +107,14 @@ body {
   color: white;
   width: auto;
   font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-size: 2.5vw;
   text-align: center;
   display: inline-block;
   box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
   border-radius: 100px;
   z-index: -1;
   margin-bottom: 0px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   border: none;
 }
 
@@ -117,11 +133,11 @@ body {
   background-color: transparent;
   border: 2px solid white;
   color: white;
-  padding: 15px 32px;
+  padding: 1.5vw 3.2vw;
   border-radius: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.7vw;
   margin-bottom: 30px;
   font-family: 'Hind';
   cursor: pointer;
@@ -144,7 +160,7 @@ body {
 }
 
 .button:hover span {
-  padding-right: 25px;
+  padding-right: 2.5vw;
 }
 
 .button:hover span:after {
@@ -154,122 +170,152 @@ body {
 
 </style>
 
+
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
-<!--link rel="icon" href="logo" /-->
-<!--link rel="apple-touch-icon" href="logo" /-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="Z_white4.png" >
+<link rel="apple-touch-icon" href="Z.jpg">
 <title>Our Team</title>
 
 <div class="box">
-  <div class="gene">
-    <h1>GENErationZ</h1>
+  <div class="gene"><br>
+    <!-- <h1>GENErationZ</h1> -->
+    <img src="full_white.png" width="500px" alt="GENErationZ"></img>
   </div>
   <br>
 
-  <a href="joinus.html" class="button"><span>
+  <a href="apply.html" class="button"><span>
     Register
-  </span>  </a>
+  </span>  </a><br><br>
 
-  <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
-    <div class="container-fluid">
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="mentorship.html">Mentorship 2020</a></li>
-
-        <li><a href="team.html" class="active">Team</a></li>
-        <!-- ** for toggle down ** <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
-        <ul class="dropdown-menu">
-        <li><a href="#"></a></li>
-        <li><a href="#"></a></li>
-      </ul>
-    </li> -->
-    <li><a href="joinus.html">Apply</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div id="nav">
+    <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
+      <div class="container-fluid">
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="mentorship.html">Mentorship 2020</a></li>
+          <li><a href="team.html" class="active">Team</a></li>
+          <!-- ** for toggle down ** <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </li> -->
+      <li><a href="apply.html">Apply</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </div>
 </nav>
+
 </div>
 
-<video autoplay muted loop id="myVideo">
+<video playsinline autoplay muted loop id="myVideo">
   <source src="720p.mp4" type="video/mp4">
   </video>
 
-  </html>
-
-  <html>
 
   <style>
 
   /* POPUP */
 
-  /* Popup container */
+  .cancel
+  {
+    display:none;
+    position:fixed;
+    top:5px;
+    right:5px;
+    background:rgb(245,245,245);
+    color:black;
+    height:42px;
+    width:35px;
+    font-size:30px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .cancel .show{
+    display: block;
+  }
+
+  .internal{
+     opacity: 100%;
+    border: 1px solid var(--green);
+    display:inline-block;
+    position:fixed;
+      top:50px;
+     right: 100px;
+    background-color: white;
+    color:black;
+    height: auto;
+    width:80%;
+    cursor: auto;
+    z-index: 5;
+  }
+
+  .itext{
+    display: inline-block;
+    width: 70%;
+    margin: 10px;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+
+  /* The actual popup (appears on top) */
+  .shadow {
+    position: fixed;
+    background: black;
+    opacity: 70%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+    cursor: auto;
+    display: block;
+  }
+
+  .popuptext{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    z-index: 5;
+    text-align: center;
+  }
+
   .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
   }
 
-  .popup .popuptext .show {
+  .popuptext .show {
     display: inline-block;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
   }
 
-  /* The actual popup (appears on top) */
-  .popup .popuptext {
-    display: none;
-    width: 200px;
-    background-color: white;
-    color: var(secText--);
-    text-align: center;
-    border-radius: 0px;
-    border: 1px solid var(--green);
-    position: absolute;
-    z-index: 1;
-    top: 100%;
-    left: 50%;
-    margin-left: -105px;
-    padding: 10px;
-  }
-
-  /* Popup arrow */
-  .popup .popuptext::after {
-    content: " ";
-    position: absolute;
-    bottom: 100%;  /* At the top of the tooltip */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent transparent var(--green) transparent;
-  }
-
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
 
   /* REST */
 
-  img{
+  img.per{
     border: 3px solid;
     border-image: linear-gradient(to bottom right, var(--dblue) 0%, var(--green) 100%);
     border-image-slice: 1;
     border-width: 3px;
     padding: 1px;
     width: 210px;
+    display: inline-block;
   }
 
   img.mentor{
@@ -397,10 +443,22 @@ body {
 
     $(function(){
 
-      $('.popup').hover(function(){
+      $('.popup').click(function(){
         var popup = $(this).find('.popuptext');
         popup.toggle("show");
+        popup = $(this).find('.cancel');
+        popup.toggle("show");
       });
+
+       $('.internal').click(function(){
+         return false;
+       });
+
+       // $('.cancel').click(function(){
+       //   // var popup = $(this).find('.popuptext');
+       //   // popup.toggle("show");
+       // }
+
     });
 
     </script>
@@ -408,47 +466,103 @@ body {
     <!--  MISSION STATEMENT -->
     <div class="content">
       <br>
-      <div class="head"><a class="green">[       </a> Head Team <a class="green">       ] </a></div><br>
+      <div class="head"><a class="green">[       </a> Lead Team <a class="green">       ] </a></div><br>
 
       <div class="innerbox">
         <div class="person">
           <div class="popup">
-            <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-            <div class="name">Jerry</div>
-            <div class="position">Lord and Saviour</div>
+            <img src="photos/arya.jpg" class="per" alt="Arya Sapra">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/arya.jpg" class="per" alt="Arya Sapra">
+                <div class="itext">
+                <div class="name">Arya Sapra</div>
+                <div class="position">Co-founder</div>
+                Arya Sapra is a rising junior at Thomas Jefferson High School for Science and Technology. Arya is an active member of his school's Lincoln Douglas Debate Team, and currently serves as the Publicist of TJ LD Debate. Arya has a deep passion for biology, and can be found attending meetings of various different clubs related to biology such as Neuroscience Society. Arya also holds a passion for music, and has participated in multiple piano festivals. Overall, he hopes to be able to share his love for biology with other students.
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Arya Sapra</div>
+            <div class="position">Co-founder</div>
           </div>
         </div>
         <div class="person">
           <div class="popup">
-            <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-            <div class="name">Jerry</div>
-            <div class="position">Lord and Saviour</div>
+            <img src="photos/isra.jpg" class="per" alt="Isra Satiar">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/isra.jpg" class="per" alt="Isra Satiar">
+                <div class="itext">
+                <div class="name">Isra Satiar</div>
+                <div class="position">Co-founder</div>
+                Isra Satiar, currently attending Thomas Jefferson High School for Science and Technology, is a rising junior. She has a strong interest in improving the mental health of her community and serves as the President of TJ Send-a-Smile. Her zeal and energy couple towards her passion for biology, which has motivated her to also lead TJ’s Biology Olympiad club. When she’s not dedicating her time towards these activities, she can be found engaging younger children in STEM through TJ KAST and teaching Quran and Arabic calligraphy at her local mosque.
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Isra Satiar</div>
+            <div class="position">Co-founder</div>
+          </div>
+        </div>
+        <br>
+        <div class="person">
+          <div class="popup">
+            <img src="photos/elena.jpg" class="per" alt="Elena Rangelov">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/elena.jpg" class="per" alt="Elena Rangelov">
+                <div class="itext">
+                <div class="name">Elena Rangelov</div>
+                <div class="position">Web Dev </div>
+                Elena is a rising junior at Thomas Jefferson High School for Science and Technology. She loves computer coding and is an officer for her girls’ coding club at school, as well as a member of various women empowerment organizations such as Built By Girls and Women Who Code. Elena is also a part of many environmental justice groups and is working to help our environment 24/7, as well as working with LGBTQ+ support groups like Casa Ruby and SMYAL. She also has a creative side; she’s passionate about piano and enjoys working with many art mediums! Her hard work and friendliness have gotten her wherever she needs to be. She’s always open to talk to anyone with similar interests and is free to answer any questions!
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Elena Rangelov</div>
+            <div class="position">Web Dev __</div>
           </div>
         </div>
         <div class="person">
           <div class="popup">
-            <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-            <div class="name">Jerry</div>
-            <div class="position">Lord and Saviour</div>
+            <img src="photos/hasita.jpg" class="per" alt="Hasita Ravula">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/hasita.jpg" class="per" alt="Hasita Ravula">
+                <div class="itext">
+                <div class="name">Hasita Ravula</div>
+                <div class="position">___</div>
+                Hasita Ravula is a rising junior at Thomas Jefferson High School for Science and Technology. Hasita can be found in her school’s Students vs. Cancer (Relay for Life) club and Tomorrow’s Women in Science and Technology club. In addition to this, she participates in dance outside of school. Hasita has a great interest in biology and is very excited to help other students explore their passion for biology.
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Hasita Ravula</div>
+            <div class="position">__</div>
           </div>
         </div>
         <div class="person">
           <div class="popup">
-            <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-            <div class="name">Jerry</div>
-            <div class="position">Lord and Saviour</div>
-          </div>
-        </div>
-        <div class="person">
-          <div class="popup">
-            <img src="dwai.jpg" alt="jerry">
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-            <div class="name">Jerry</div>
-            <div class="position">Lord and Saviour</div>
+            <img src="photos/marina.jpg" class="per" alt="Marina Wang">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/marina.jpg" class="per" alt="Marina Wang">
+                <div class="itext">
+                <div class="name">Marina Wang</div>
+                <div class="position">__</div>
+                ...
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Marina Wang</div>
+            <div class="position">__</div>
           </div>
         </div>
 
@@ -461,73 +575,64 @@ body {
       <div class="innerbox2">
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name curr">do</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/jeb.jpg" alt="Jeb Cui">
+            <div class="mentor name curr">Jeb Cui</div>
+            <span class="popuptext">Jeb Cui is a rising Junior at Thomas Jefferson High School for Science and Technology. He has a passion for science and mathematics. Jeb can be found in his school’s Math Team, Intermediate Computer Team, and Physics Team, and he has attended numerous meetings and guest lectured for the Biology Olympiad club. He loves teaching children and getting them excited about STEM, and on weekends, he enjoys teaching computer science to younger students at his local Chinese school. Outside of academics, he has participated in his school’s cross country team and track and field team.</div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name curr">do</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/kyra.jpg" alt="Kyra Li">
+            <div class="mentor name curr">Kyra Li</div>
+            <span class="popuptext">Kyra Li is currently a rising junior at Thomas Jefferson High School for Science and Technology. Kyra is an active member of her school’s Biology Olympiad, media, and Future Problem Solvers clubs. Outside of academics, she enjoys playing tennis, and is on her school’s tennis team. Kyra has a strong interest in helping others improve their lives, and has started a project to help people work towards a healthier lifestyle. She also has a passion for biology, and is excited that her knowledge will be used to help younger students discover their interest in biology. </div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name curr">do</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/aneri.jpg" alt="Aneri Shah">
+            <div class="mentor name curr">Aneri Shah</div>
+            <span class="popuptext">Aneri Shah is a rising junior at Thomas Jefferson High School for Science and Technology. She is a member of clubs such as Microbiology club, Future Problem Solvers club, Art club, Codi’s hats, and Japanese Culture club. She also enjoys tutoring students and organizing volunteer opportunities. Aneri loves learning biology and computer science, and wants to teach kids about them. On the weekends, she is a teacher’s assistant at a local Jain school. She plays piano, reads, and dances in her free time. </div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name curr">do</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/keertana.jpg" alt="Keertana Yalamanchili"> <!------------>
+            <div class="mentor name curr">Keertana Yalamanchili</div>
+            <span class="popuptext">Keertana Yalamanchili is a rising junior at Thomas Jefferson High School for Science & Technology. She is passionate about biology and mathematics. She actively attends Medical Society, Neuroscience Society, and Biology Olympiad meetings. She is currently the secretary of the Medical Society and Neuroscience Society, and subject coordinator of TJ Peer Tutoring. In her spare time, she enjoys singing and dancing, playing the violin, reading books, and tutoring.</div>
         </div><br>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name">cannot</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <div class="mentor name">Mentors TBD</div>
+            <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name">cannot</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <div class="mentor name">Mentors TBD</div>
+            <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name">cannot</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <div class="mentor name">Mentors TBD</div>
+            <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name">cannot</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <div class="mentor name">Mentors TBD</div>
+            <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor" src="dwai.jpg" alt="jerry">
-            <div class="mentor name">cannot</div>
-            <span class="popuptext">there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. there is no god, only jerry. </span>
-          </div>
+            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <div class="mentor name">Mentors TBD</div>
+            <span class="popuptext"></div>
         </div>
 
 
       </div>
 
     </div>
-     <div id="footer"></div>
+    <div id="footer"></div>
 
 
     <div class="footer">
