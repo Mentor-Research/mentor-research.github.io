@@ -112,6 +112,14 @@ body {
   border: none;
 }
 
+.back{
+  top:0;
+  height: 60vw;
+  z-index: -3;
+  display: none;
+  position: fixed;
+}
+
 #myVideo{
   display: inline-block;
   position: fixed;
@@ -121,6 +129,11 @@ body {
   height: 60vw;
   width: auto;
   z-index: -2;
+}
+
+@media screen and (min-width: 2000px) {
+    #myVideo {display: none;}
+    #back{display: inline-block;}
 }
 
 #logo{
@@ -169,27 +182,6 @@ body {
 
 </style>
 
-<script>
-
-// window.onscroll = function() {scroll()};
-//
-// // Get the navbar
-// var navbar = document.getElementById("nav");
-//
-// // Get the offset position of the navbar
-// var sticky = navbar.offsetTop;
-//
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function scroll() {
-//   if (window.pageYOffset >= sticky) {
-//     navbar.add("sticky")
-//   } else {
-//     navbar.remove("sticky");
-//   }
-// }
-
-</script>
-
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap" rel="stylesheet">
@@ -216,6 +208,7 @@ body {
   <source src="720p.mp4" type="video/mp4">
   </video>
 
+<img class="back" src="dna.jpg">
 
 <div class="rest">
 
@@ -257,8 +250,8 @@ hr{
  text-align:center;
 }
 
-.head1{
-  font-size: 3.3vw;
+.topHead{
+  font-size: 3vw;
   font-weight: bold;
   color: var(--dblue);
   width: auto;
@@ -286,9 +279,9 @@ hr{
   width: 100%;
   padding: 0px;
   padding-bottom: 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: inline-block;
+  /* flex-direction: column;
+  justify-content: center; */
   text-align: center;
 }
 
@@ -301,8 +294,8 @@ hr{
   font-family: 'Montserrat';
   display: inline-block;
   margin: 0px;
-  font-size: 2.5vw;
-  padding: 3vw;
+  font-size: 20px;
+  padding: 2.5vw;
   font-weight: bold;
   color: var(--priText);
   /* border-top: 3px solid;
@@ -319,7 +312,7 @@ hr{
   text-align: center;
   font-style: "Hind";
   padding-bottom: 5vw;
-  font-size: 15px;
+  font-size: 13px;
   /* white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999
     white-space: -pre-wrap;      /* Opera 4-6
     white-space: -o-pre-wrap;    /* Opera 7
@@ -443,9 +436,9 @@ hr{
 <div class="content">
 <br>
 
-<div class="head1">Biology Research Mentorship Program</div>
+<div class="topHead">Biology Research Mentorship Program</div>
 <!-- <div class="head2">Biology Research Mentorship Program</div> -->
-<br><br><hr><br>
+<br><hr><br>
 
   <div class="section">
     <div class="head"><a class="green">[       </a> Our Mission <a class="green">       ] </a></div><br>
@@ -474,7 +467,7 @@ Our team encountered their first biology research project in high school. In jus
   <div class="head"><a class="green">[       </a> Partners <a class="green">       ] </a></div><br>
   <div class="text">
     <a href="https://youngscholarscircle.com/">
-    <img src="young_scholars.png" width="300vw" alt="Young Scholars Circle"></a><br>
+    <img src="young_scholars.png" width="200px" alt="Young Scholars Circle"></a><br>
     Young Scholars Circle
 </div>
 </div>
