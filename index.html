@@ -112,7 +112,7 @@ body {
   border: none;
 }
 
-.back{
+#back{
   top:0;
   height: 60vw;
   z-index: -3;
@@ -131,7 +131,7 @@ body {
   z-index: -2;
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (max-width: 2000px) {
     #myVideo {display: none;}
     #back{display: inline-block;}
 }
@@ -208,7 +208,7 @@ body {
   <source src="720p.mp4" type="video/mp4">
   </video>
 
-<img class="back" src="dna.jpg">
+<img id="back" src="dna.jpg">
 
 <div class="rest">
 
@@ -251,7 +251,7 @@ hr{
 }
 
 .topHead{
-  font-size: 3vw;
+  font-size: 20px;
   font-weight: bold;
   color: var(--dblue);
   width: auto;
