@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
 
 :root {
@@ -14,17 +14,7 @@
   --dgreen: #29A699;
 }
 
-/* .sticky {
-   position: fixed;
-   top: 0px;
-   width: 100%;
- }
-
- .sticky + .content {
-   padding-top: 60px;
- } */
-
-
+/******************************NAV*****************************/
 .nav.navbar-nav li{
   font-size: 1.3vw;
   text-align: center;
@@ -83,6 +73,7 @@ ul li{
   margin-right: auto;
 }
 
+/************************************************************************/
 
 .box{
   text-align: center;
@@ -114,14 +105,19 @@ body {
 }
 
 #myVideo{
-  display: block;
+  display: inline-block;
   position: fixed;
   padding: 0px;
   top: 0px;
   left: 0px;
-  height: auto;
-  width: 100%;
-  z-index: -1;
+  height: 60vw;
+  width: auto;
+  z-index: -2;
+}
+
+#logo{
+  height: 20vw;
+  width: auto;
 }
 
 .button {
@@ -133,56 +129,56 @@ body {
   text-align: center;
   display: inline-block;
   font-size: 1.3vw;
-  margin-bottom: 30px;
+  margin-bottom: 3vw;
   font-family: 'Hind';
   cursor: pointer;
 }
 
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
-  .button:hover span {
-    padding-right: 2.5vw;
-  }
+.button:hover span {
+  padding-right: 2.5vw;
+}
 
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 </style>
 
 <script>
 
-window.onscroll = function() {scroll()};
-
-// Get the navbar
-var navbar = document.getElementById("nav");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function scroll() {
-  if (window.pageYOffset >= sticky) {
-    navbar.add("sticky")
-  } else {
-    navbar.remove("sticky");
-  }
-}
+// window.onscroll = function() {scroll()};
+//
+// // Get the navbar
+// var navbar = document.getElementById("nav");
+//
+// // Get the offset position of the navbar
+// var sticky = navbar.offsetTop;
+//
+// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function scroll() {
+//   if (window.pageYOffset >= sticky) {
+//     navbar.add("sticky")
+//   } else {
+//     navbar.remove("sticky");
+//   }
+// }
 
 </script>
 
@@ -199,13 +195,21 @@ function scroll() {
 <div class="box">
   <div class="gene"><br>
     <!-- <h1>GENErationZ</h1> -->
-    <img src="full_white.png" width="500vw" alt="GENErationZ"></img>
+    <img id="logo" src="full_white.png" alt="GENErationZ"></img>
   </div>
 <br>
 
 <a href="apply.html" class="button"><span>
   Register
-</span>  </a><br><br>
+</span>  </a><br>
+</div>
+
+<video playsinline autoplay muted loop id="myVideo">
+  <source src="720p.mp4" type="video/mp4">
+  </video>
+
+
+<div class="rest">
 
 <div id="nav">
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
@@ -230,11 +234,8 @@ function scroll() {
 </div>
 </nav>
 
-</div>
 
-<video playsinline autoplay muted loop id="myVideo">
-  <source src="720p.mp4" type="video/mp4">
-  </video>
+</div>
 
 
 <style>
@@ -270,14 +271,15 @@ hr{
 }
 
 .content{
+  z-index: 4;
   background: white;
   margin: 0px;
   width: 100%;
   padding: 0px;
   padding-bottom: 5vw;
-  display: inline-block;
-  text-align: center;
-  wrap: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .head .green{
@@ -429,7 +431,6 @@ hr{
   Our objective is to simulate a free and accessible research and mentorship-based environment for biology-oriented middle schoolers by pairing them with high schoolers who already have research experience. This program teaches students critical problem-solving skills, teamwork, and communication, and offers them a foundation to excel in their high school biology classes and future research opportunities.
   </div>
 </div>
-<br>
 
 <div class="mission">
   <div class="head"><a class="green">[       </a> Our Inspiration <a class="green">       ] </a></div><br>
@@ -437,7 +438,6 @@ hr{
 Our team encountered their first biology research project in high school. In just the span of a few months, we learned how to conduct research together, perform experiments, and present findings to an audience, all in a guided professional environment. This hands-on approach taught us more than any biology lesson could have. Inspired by this, we set out to create the same opportunities for younger kids in our generation, so that they could learn real-world applications and become better scientists and researchers in the future.
 </div>
 </div>
-<br>
 
 <div class="mission">
   <div class="head"><a class="green">[       </a> Our Initiative <a class="green">       ] </a></div><br>
@@ -452,8 +452,7 @@ Our team encountered their first biology research project in high school. In jus
   <div class="head"><a class="green">[       </a> Partners <a class="green">       ] </a></div><br>
   <div class="text">
     <a href="https://youngscholarscircle.com/">
-    <img src="young_scholars.png" width="300px" alt="Young Scholars Circle">
-  </a>
+    <img src="young_scholars.png" width="300vw" alt="Young Scholars Circle"></a><br>
     Young Scholars Circle
 </div>
 </div>
