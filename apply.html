@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
+
+
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
 <style>
 
 :root {
@@ -14,21 +16,10 @@
   --dgreen: #29A699;
 }
 
-/* .sticky {
-   position: fixed;
-   top: 0px;
-   width: 100%;
- }
-
- .sticky + .content {
-   padding-top: 60px;
- } */
-
-
+/******************************NAV*****************************/
 .nav.navbar-nav li{
-  font-size: 1.3vw;
   text-align: center;
-  display:inline;
+  display: inline;
   font-family: 'Montserrat';
 }
 
@@ -47,7 +38,7 @@
   color: gray;
   padding: 1.4vw 1.6vw;
   text-decoration: none;
-  font-size: 1.3vw;
+  font-size: 15px;
 }
 
 /* Change the color of links on hover */
@@ -67,6 +58,7 @@
 }
 
 ul {
+  box-shadow: 0px -30px 50px -10px rgba(0, 0, 0, 0.5);
   list-style-type: none;
   overflow: hidden;
   background-color: var(--green);
@@ -83,18 +75,26 @@ ul li{
   margin-right: auto;
 }
 
+/************************************************************************/
 
 .box{
   text-align: center;
   width: 100%;
   padding: 0px;
   margin: 0px;
+  top: 0;
+  position: fixed;
+  z-index: -1;
 }
 
 body {
   font-family: 'Hind', sans-serif;
   padding: 0;
   margin: 0;
+}
+
+.rest{
+  margin-top: 35vw;
 }
 
 .gene {
@@ -113,78 +113,75 @@ body {
   border: none;
 }
 
+#back{
+  top:0;
+  height: 60vw;
+  z-index: -3;
+  display: none;
+  position: fixed;
+}
+
 #myVideo{
-  display: block;
+  display: inline-block;
   position: fixed;
   padding: 0px;
   top: 0px;
   left: 0px;
-  height: auto;
-  width: 100%;
-  z-index: -1;
+  height: 60vw;
+  width: auto;
+  z-index: -2;
+}
+
+@media screen and (max-width: 800px) {
+    #myVideo {display: none;}
+    #back{display: inline-block;}
+}
+
+#logo{
+  height: 20vw;
+  width: auto;
 }
 
 .button {
   background-color: transparent;
-  border: 2px solid white;
+  border: .2vw solid white;
   color: white;
   padding: 1.2vw 2.8vw;
   border-radius: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 1.3vw;
-  margin-bottom: 30px;
+  font-size: 1.8vw;
+  margin-bottom: 3vw;
   font-family: 'Hind';
   cursor: pointer;
 }
 
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .button:hover span {
-    padding-right: 2.5vw;
-  }
-
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-</style>
-
-<script>
-
-window.onscroll = function() {scroll()};
-
-// Get the navbar
-var navbar = document.getElementById("nav");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function scroll() {
-  if (window.pageYOffset >= sticky) {
-    navbar.add("sticky")
-  } else {
-    navbar.remove("sticky");
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-</script>
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 2.5vw;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
 
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -194,18 +191,27 @@ function scroll() {
 
 <link rel="icon" href="Z_white4.png" >
 <link rel="apple-touch-icon" href="Z.jpg">
-<title>Apply</title>
+<title>GENErationZ</title>
 
 <div class="box">
   <div class="gene"><br>
     <!-- <h1>GENErationZ</h1> -->
-    <img src="full_white.png" width="500vw" alt="GENErationZ"></img>
+    <img id="logo" src="full_white.png" alt="GENErationZ"></img>
   </div>
 <br>
 
 <a href="apply.html" class="button"><span>
   Register
-</span>  </a><br><br>
+</span>  </a><br>
+</div>
+
+<video autoplay loop autobuffer muted playsinline webkit-playsinline id="myVideo">
+  <source src="720p.mp4" type="video/mp4">
+  </video>
+
+<img id="back" src="dna.jpg">
+
+<div class="rest">
 
 <div id="nav">
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
@@ -213,7 +219,7 @@ function scroll() {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="mentorship.html">Mentorship 2020</a></li>
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
@@ -223,44 +229,59 @@ function scroll() {
         <li><a href="#"></a></li>
       </ul>
     </li> -->
-    <li><a href="apply.html" class="active">Apply</a></li>
+    <li><a href="apply.html">Apply</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
 </div>
 </nav>
 
+
 </div>
 
-<video playsinline autoplay muted loop id="myVideo">
-  <source src="720p.mp4" type="video/mp4">
-  </video>
-
-
 <style>
+
+hr{
+  width: 80%;
+}
 
 .p {
  color: white;
  text-align:center;
 }
 
+.topHead{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--dblue);
+  width: auto;
+}
+
+.head2{
+  font-size: 2.3vw;
+  color: var(--green);
+}
+
 .footer{
  position: relative;
  text-align: center;
- bottom: 0px;
+ bottom: 0;
  width: 100%;
  background-color: #333;
- padding-top: 30px;
- padding-bottom: 30px;
+ padding-top: 3vw;
+ padding-bottom: 3vw;
 }
 
 .content{
+  z-index: 0;
   background: white;
   margin: 0px;
   width: 100%;
   padding: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 5vw;
   display: inline-block;
+  /* flex-direction: column;
+  justify-content: center; */
   text-align: center;
 }
 
@@ -273,8 +294,8 @@ function scroll() {
   font-family: 'Montserrat';
   display: inline-block;
   margin: 0px;
-  font-size: 30px;
-  padding: 30px;
+  font-size: 20px;
+  padding: 2.5vw;
   font-weight: bold;
   color: var(--priText);
   /* border-top: 3px solid;
@@ -283,6 +304,118 @@ function scroll() {
   border-width: 3px; */
 }
 
+.text {
+  color: var(--secText);
+  margin: 0px;
+  /* width: 70%; */
+  display: inline-block;
+  text-align: center;
+  font-style: "Hind";
+  padding-bottom: 5vw;
+  font-size: 13px;
+  /* white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999
+    white-space: -pre-wrap;      /* Opera 4-6
+    white-space: -o-pre-wrap;    /* Opera 7
+    white-space: pre-wrap;       /* css-3
+    word-wrap: break-word;       /* Internet Explorer 5.5+
+    white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari
+    word-break: break-all;
+    white-space: normal; */
+}
+
+.event{
+  font-weight: bold;
+  font-size: 1.4vw;
+}
+
+.event2{
+  font-weight:bold;
+}
+
+.section{
+  padding-bottom: 2vw;
+  display: inline-block;
+  /* flex-direction: column;
+  justify-content: center; */
+  width: 80%;
+  text-align: center;
+}
+
+ body {
+	 font-family: 'Hind', sans-serif;
+	 margin: 0;
+}
+ main {
+	 min-width: 40%;
+	 max-width: 50%;
+	 margin: auto;
+}
+ p {
+	 font-size: 1.2vw;
+	 line-height: 1.75em;
+	 border-top: 3px solid;
+	 border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+	 border-image-slice: 1;
+	 border-width: 3px;
+	 margin: 0;
+	 padding: 4vw;
+	 counter-increment: section;
+	 position: relative;
+	 color: var(--secText);
+   text-align: left;
+}
+ p:before {
+   font-family: 'Montserrat';
+	 content: counter(section);
+	 position: absolute;
+	 border-radius: 50%;
+	 padding: 1vw;
+	 height: 1.25em;
+	 width: 1.25em;
+	 background-color: #34435e;
+	 text-align: center;
+	 line-height: 1.25em;
+	 color: #fff;
+	 font-size: 1.2vw;
+}
+ p:nth-child(odd) {
+	 border-right: 3px solid;
+	 padding-left: 0;
+   text-align: right;
+}
+ p:nth-child(odd):before {
+	 left: 100%;
+	 margin-left: -20px;
+}
+ p:nth-child(even) {
+	 border-left: 3px solid;
+	 padding-right: 0;
+   text-align: left;
+}
+ p:nth-child(even):before {
+	 right: 100%;
+	 margin-right: -20px;
+}
+ p:first-child {
+   border-top: 3px solid;
+   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+   border-image-slice: 1;
+   border-width: 3px;
+	 border-top-right-radius: 0;
+	 border-top-left-radius: 0;
+}
+ p:last-child {
+	 border-bottom-right-radius: 0;
+	 border-bottom-left-radius: 0;
+   border-bottom: 3px solid;
+   border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+   border-image-slice: 1;
+   border-width: 3px;
+}
+
+  p .event{
+  font-weight: bold;
+}
 
 </style>
 
@@ -299,15 +432,15 @@ function scroll() {
            });
       </script>
 
-<!--  MISSION STATEMENT -->
-<div class="content"><br>
+<!--  section STATEMENT -->
+<div class="content">
+<br>
+
     <div class="head"><a class="green">[       </a> Sign Up <a class="green">       ] </a></div><br><br>
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScJT4fUtKis0xSVfJstZUwf2evhbf9cSiXGhMUPvjj_08ChiA/viewform?embedded=true" width="640" height="1730" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 </div>
-
-<!-- <div id="footer"></div> -->
 
 
 <div class="footer">

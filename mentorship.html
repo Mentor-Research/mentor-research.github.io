@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
 
 :root {
@@ -14,21 +14,11 @@
   --dgreen: #29A699;
 }
 
-/* .sticky {
-   position: fixed;
-   top: 0px;
-   width: 100%;
- }
-
- .sticky + .content {
-   padding-top: 60px;
- } */
-
-
+/******************************NAV*****************************/
 .nav.navbar-nav li{
-  font-size: 1.3vw;
+  font-size: 15px;
   text-align: center;
-  display:inline;
+  display: inline;
   font-family: 'Montserrat';
 }
 
@@ -47,7 +37,7 @@
   color: gray;
   padding: 1.4vw 1.6vw;
   text-decoration: none;
-  font-size: 1.3vw;
+  font-size: 12px;
 }
 
 /* Change the color of links on hover */
@@ -67,6 +57,7 @@
 }
 
 ul {
+  box-shadow: 0px -30px 50px -10px rgba(0, 0, 0, 0.5);
   list-style-type: none;
   overflow: hidden;
   background-color: var(--green);
@@ -83,18 +74,26 @@ ul li{
   margin-right: auto;
 }
 
+/************************************************************************/
 
 .box{
   text-align: center;
   width: 100%;
   padding: 0px;
   margin: 0px;
+  top: 0;
+  position: fixed;
+  z-index: -1;
 }
 
 body {
   font-family: 'Hind', sans-serif;
   padding: 0;
   margin: 0;
+}
+
+.rest{
+  margin-top: 35vw;
 }
 
 .gene {
@@ -113,78 +112,75 @@ body {
   border: none;
 }
 
+#back{
+  top:0;
+  height: 60vw;
+  z-index: -3;
+  display: none;
+  position: fixed;
+}
+
 #myVideo{
-  display: block;
+  display: inline-block;
   position: fixed;
   padding: 0px;
   top: 0px;
   left: 0px;
-  height: auto;
-  width: 100%;
-  z-index: -1;
+  height: 60vw;
+  width: auto;
+  z-index: -2;
+}
+
+@media screen and (max-width: 2000px) {
+    #myVideo {display: none;}
+    #back{display: inline-block;}
+}
+
+#logo{
+  height: 20vw;
+  width: auto;
 }
 
 .button {
   background-color: transparent;
-  border: 2px solid white;
+  border: .2vw solid white;
   color: white;
   padding: 1.2vw 2.8vw;
   border-radius: 10px;
   text-align: center;
   display: inline-block;
-  font-size: 1.3vw;
-  margin-bottom: 30px;
+  font-size: 1.8vw;
+  margin-bottom: 3vw;
   font-family: 'Hind';
   cursor: pointer;
 }
 
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-  .button span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .button:hover span {
-    padding-right: 2.5vw;
-  }
-
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-</style>
-
-<script>
-
-window.onscroll = function() {scroll()};
-
-// Get the navbar
-var navbar = document.getElementById("nav");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function scroll() {
-  if (window.pageYOffset >= sticky) {
-    navbar.add("sticky")
-  } else {
-    navbar.remove("sticky");
-  }
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-</script>
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 2.5vw;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
 
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -194,18 +190,27 @@ function scroll() {
 
 <link rel="icon" href="Z_white4.png" >
 <link rel="apple-touch-icon" href="Z.jpg">
-<title>Mentorship 2020</title>
+<title>GENErationZ</title>
 
 <div class="box">
   <div class="gene"><br>
     <!-- <h1>GENErationZ</h1> -->
-    <img src="full_white.png" width="500vw" alt="GENErationZ"></img>
+    <img id="logo" src="full_white.png" alt="GENErationZ"></img>
   </div>
 <br>
 
 <a href="apply.html" class="button"><span>
   Register
-</span>  </a><br><br>
+</span>  </a><br>
+</div>
+
+<video autoplay loop autobuffer muted playsinline webkit-playsinline id="myVideo">
+  <source src="720p.mp4" type="video/mp4">
+  </video>
+
+<img id="back" src="dna.jpg">
+
+<div class="rest">
 
 <div id="nav">
   <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
@@ -214,7 +219,7 @@ function scroll() {
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="mentorship.html"  class="active">Mentorship 2020</a></li>
+        <li><a href="mentorship.html" class="active">Mentorship 2020</a></li>
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -230,13 +235,8 @@ function scroll() {
 </div>
 </nav>
 
+
 </div>
-
-<video playsinline autoplay muted loop id="myVideo">
-  <source src="720p.mp4" type="video/mp4">
-  </video>
-
-
   <style>
 
   .contain{
