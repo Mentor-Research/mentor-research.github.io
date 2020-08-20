@@ -94,7 +94,7 @@ body {
 }
 
 .rest{
-  margin-top: 35vw;
+  margin-top: 30vw;
 }
 
 .gene {
@@ -139,7 +139,7 @@ body {
 }
 
 #logo{
-  height: 20vw;
+  height: 15vw;
   width: auto;
 }
 
@@ -197,7 +197,7 @@ body {
 <div class="box">
   <div class="gene"><br>
     <!-- <h1>GENErationZ</h1> -->
-    <img id="logo" src="full_white.png" alt="GENErationZ"></img>
+    <a href="usgenerationz.com"><img id="logo" src="full_white.png" alt="GENErationZ"></img></a>
   </div>
 <br>
 
@@ -252,6 +252,7 @@ body {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
     padding: 20px;
+    margin: 10px;
   }
 
   .warn {
@@ -275,13 +276,17 @@ body {
   }
 
   .content{
+    z-index: 0;
     background: white;
     margin: 0px;
     width: 100%;
     padding: 0px;
-    padding-bottom: 50px;
-    display: inline-block;
+    padding-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    align-items: center;
   }
 
   .head .green{
@@ -290,18 +295,22 @@ body {
 
   .head {
     white-space: pre;
+    left: 0;
+    right: 0;
+    padding: 0px;
     font-family: 'Montserrat';
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0px;
-    font-size: 30px;
-    padding: 25px;
+    font-size: 25px;
+    /* padding: 2.5vw; */
     font-weight: bold;
     color: var(--priText);
-    /* border-top: 3px solid;
-    border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
-    border-image-slice: 1;
-    border-width: 3px; */
+    margin: 0px;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
   }
+
 
   .text2{
     font-weight: bold;
@@ -310,18 +319,22 @@ body {
 
   .text {
     color: var(--secText);
-    padding: 0px;
     margin: 0px;
-    width: 800px;
+    /* width: 70%; */
     display: inline-block;
     text-align: center;
     font-style: "Hind";
-    padding-bottom: 50px;
+    padding-bottom: 5vw;
+    font-size: 18px;
   }
 
-  .mission{
-    padding-bottom: 20px;
-    display: inline-block;
+  .section{
+    padding-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    text-align: center;
   }
 
 .des .h{
@@ -389,6 +402,7 @@ body {
     display: inline-block;
     text-align: center;
     box-shadow: -2px 2px 1px grey;
+    margin: 3px;
   }
 
   .datesg{
@@ -401,6 +415,7 @@ body {
     display: inline-block;
     text-align: center;
     box-shadow: -2px 2px 1px grey;
+    margin: 3px;
   }
 
 
@@ -419,23 +434,23 @@ $(function(){
 });
 </script>
 
-<!--  MISSION STATEMENT -->
+<!--  section STATEMENT -->
 <div class="content">
   <br>
-  <div class="mission">
+  <div class="section">
     <div class="warn"><br>
       Due to current, unprecedented circumstances, mentorship 2020 will be held through online sessions in Zoom every Saturday.
     <br><br></div>
-    <div class="head"><a class="green">[       </a> Overall Structure <a class="green">       ] </a></div><br>
+    <div class="head"><a class="green">[       </a> Overall Structure <a class="green">       ]</a></div><br>
     <div class="text">
       <br> Each of our highly-qualified and trained mentors will work a small group of participants, guiding them in a collaborative setting to understand biological concepts and formulate research questions through interactive experiments.
       <br><br>  To allow participants to explore which aspect of biology they are most interested in, we will facilitate a rotation system of 4 major topics in biology, which will extend throughout the first 8 weeks of the program (2 weeks per topic/lab). This exposure to various topics will act as a stepping stone to later guide their personalized group research project.
       <br><br><br><div class="contain">
          The 4 topics will include:
-        <br><br> <div class="text2"> Ecology: </div><br>  &emsp; Learning and analyzing how the natural ecological environment and competition between organisms affect <br>&emsp; barnacle and bacterial populations.
-        <br><br> <div class="text2"> Bacterial Transformation: </div><br>  &emsp;  Learning how to make bacteria fluoresce by inserting plasmids in DNA via bacterial transformation.
-        <br><br>  <div class="text2"> Immunology and Epidemiology: </div><br> &emsp;  Learning about coronaviruses, how it spreads, and how to prevent transmission through mock labs and <br>&emsp; activities.
-        <br><br>  <div class="text2"> Evolution: </div><br> &emsp;  Learning about the evolutionary relationships of various organisms’  nucleotide sequences and their <br>&emsp; ancestors using BLAST (Basic Local Alignment Search Tool) created by NIH
+        <br><br> <div class="text2"> Ecology: </div><br>   Learning and analyzing how the natural ecological environment and competition between organisms affect <br> barnacle and bacterial populations.
+        <br><br> <div class="text2"> Bacterial Transformation: </div><br>   Learning how to make bacteria fluoresce by inserting plasmids in DNA via bacterial transformation.
+        <br><br>  <div class="text2"> Immunology and Epidemiology: </div><br>   Learning about coronaviruses, how it spreads, and how to prevent transsection through mock labs and <br> activities.
+        <br><br>  <div class="text2"> Evolution: </div><br>   Learning about the evolutionary relationships of various organisms’  nucleotide sequences and their <br> ancestors using BLAST (Basic Local Alignment Search Tool) created by NIH
       </div>
       <br><br>  For the last 4 sessions of the program, mentors will assist participants to write a formal research paper, which we will post on our website at the end of the program.
 
