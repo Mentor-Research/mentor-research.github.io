@@ -249,8 +249,8 @@ body {
   {
     display:none;
     position:fixed;
-    top:5px;
-    right:5px;
+    top:1vw;
+    right:1vw;
     background:rgb(245,245,245);
     color:black;
     height:42px;
@@ -268,12 +268,12 @@ body {
   }
 
   .internal{
-     opacity: 100%;
+    opacity: 100%;
     border: 1px solid var(--green);
     display:inline-block;
     position:fixed;
-      top:50px;
-     right: 100px;
+    top:5vw;
+    right: 10vw;
     background-color: white;
     color:black;
     height: auto;
@@ -282,12 +282,20 @@ body {
     z-index: 5;
   }
 
+  @media screen and (max-width: 800px) {
+      .internal {width: 100%; height: 100%; top:0vw; right:0vw;}
+      .popup {width: 100%; height: 100%; overflow: scroll; }
+      .itext{overflow: scroll;}
+  }
+
   .itext{
     display: inline-block;
     width: 70%;
     margin: 10px;
+    height: 80%;
     text-align: left;
     padding-bottom: 40px;
+    font-size: 15px;
   }
 
   /* The actual popup (appears on top) */
@@ -312,16 +320,19 @@ body {
     display: none;
     z-index: 5;
     text-align: center;
+    /* height: ; */
+    min-height: 100vh;
   }
 
   .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    width: 100%;
   }
 
   .popuptext .show {
-    display: inline-block;
+    display: flex;
   }
 
 
@@ -406,6 +417,16 @@ body {
     padding-bottom: 30px;
   }
 
+  .content .show{
+    background: white;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
+    display: inline-block;
+    text-align: center;
+  }
+
   .content{
     background: white;
     margin: 0px;
@@ -469,6 +490,9 @@ body {
         popup.toggle("show");
         popup = $(this).find('.cancel');
         popup.toggle("show");
+        // document.getElementsByClassName("content").style.display = 'none';
+        document.getElementsByClassName('content').style.color = 'tomato';
+        alert("hi");
       });
 
        $('.internal').click(function(){
@@ -487,7 +511,7 @@ body {
     <!--  MISSION STATEMENT -->
     <div class="content">
       <br>
-      <div class="head"><a class="green">[       </a> Lead Team <a class="green">       ] </a></div><br>
+      <div class="head"><a class="green">[     </a> Lead Team <a class="green">     ] </a></div><br>
 
       <div class="innerbox">
         <div class="person">
@@ -650,11 +674,11 @@ body {
               </div>
               <div class="mentor person">
                 <div class="popup">
-                  <img src="photos/default.png" class="mentor per" alt="Keertana Yalamanchili">
+                  <img src="photos/keertana.jpg" class="mentor per" alt="Keertana Yalamanchili">
                   <div class="popuptext">
                     <div class="shadow"></div>
                     <div class="internal"><br><br>
-                      <img src="photos/default.png" class="mentor per" alt="Keertana Yalamanchili">
+                      <img src="photos/keertana.jpg" class="mentor per" alt="Keertana Yalamanchili">
                       <div class="itext">
                       <div class="name">Keertana Yalamanchili</div>
                       <div class="position">Curriculum Designer</div>
@@ -669,86 +693,85 @@ body {
       <br>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/default.png" alt="Diya Dinesh">
             <div class="mentor name">Diya Dinesh</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/jaya.jpg" alt="Jayashree Ezhilarasu">
             <div class="mentor name">Jayashree Ezhilarasu</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/jessica.jpg" alt="Jessica Feng">
             <div class="mentor name">Jessica Feng</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/medha.JPG" alt="Medha Gaddam">
             <div class="mentor name">Medha Gaddam</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/bhavya.jpg" alt="Bhavya Guduru">
             <div class="mentor name">Bhavya Guduru</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/default.png" alt="Suchita Hadimani">
             <div class="mentor name">Suchita Hadimani</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
-          
-     <br>
+
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/sanjay.JPG" alt="Sanjay Jacob">
             <div class="mentor name">Sanjay Jacob</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/elaine.JPG" alt="Elaine Li">
             <div class="mentor name">Elaine Li</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/isaac.jpg" alt="Isaac Lin">
             <div class="mentor name">Isaac Lin</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/anjali.jpg" alt="Anjali Pagidi">
             <div class="mentor name">Anjali Pagidi</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/default.png" alt="Bhaswith Suresh">
             <div class="mentor name">Bhaswith Suresh</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
         </div>
         <div class="mentor person">
           <div class="popup">
-            <img class="mentor per" src="photos/default.png" alt="TBD">
+            <img class="mentor per" src="photos/default.png" alt="Brian Xiao">
             <div class="mentor name">Brian Xiao</div>
             <div class="position">Mentor</div>
             <span class="popuptext"></div>
