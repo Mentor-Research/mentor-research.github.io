@@ -221,7 +221,8 @@ body {
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="mentorship.html" class="active">Mentorship 2020</a></li>
+        <li><a href="mentorship20.html">Mentorship 2020</a></li>
+        <li><a href = "mentorship21.html" class="active">Mentorship 2021</a></li>
         <li><a href="team.html">Team</a></li>
         <!-- ** for toggle down ** <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
@@ -253,6 +254,57 @@ body {
     border-top-left-radius: 0;
     padding: 20px;
     margin: 10px;
+  }
+
+  img{
+    margin: 10px;
+    margin-top: 30px;
+  }
+
+  img.first{
+    border: 3px solid;
+    border-image: linear-gradient(to bottom right, gold 0%, goldenrod 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    padding: 1px;
+    width: 210px;
+    height: 280px;
+    display: inline-block;
+  }
+
+  img.second{
+    border: 3px solid;
+    border-image: linear-gradient(to bottom right, silver 0%, darkgray 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    padding: 1px;
+    width: 210px;
+    height: 280px;
+    display: inline-block;
+  }
+
+  img.third{
+    border: 3px solid;
+    border-image: linear-gradient(to bottom right, #fa9d49 0%, #af6e33 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    padding: 1px;
+    width: 210px;
+    height: 280px;
+    display: inline-block;
+  }
+
+  img.runner{
+    width: 150px;
+    height: 200px;
+    border: 3px solid var(--green);
+    padding: 1px;
+  }
+
+  img.i{
+    width: 210px;
+    height: 280px;
+    border: 3px solid var(--green);
   }
 
   .warn {
@@ -330,7 +382,7 @@ body {
 
   .section{
     padding-bottom: 2vw;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     width: 90%;
@@ -419,6 +471,100 @@ body {
   }
 
 
+
+
+
+
+
+
+  * {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
 </style>
 
 <meta charset="UTF-8">
@@ -432,104 +578,149 @@ body {
 $(function(){
   $('#footer').load('footer.html');
 });
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
 </script>
 
 <!--  section STATEMENT -->
 <div class="content">
   <br>
   <div class="section">
-    <div class="warn"><br>
-      Due to current, unprecedented circumstances, mentorship 2020 will be held through online sessions in Zoom every Saturday.
-    <br><br></div>
-    <div class="head"><a class="green">[  </a> Overall Structure <a class="green">  ]</a></div><br>
-    <div class="text">
-      <br> Each of our qualified and trained mentors will work a small group of participants, guiding them in a collaborative setting to understand biological concepts and formulate research questions through interactive experiments.
-      <br><br>  To allow participants to explore which aspect of biology they are most interested in, we will facilitate a rotation system of 4 major topics in biology, which will extend throughout the first 8 weeks of the program (2 weeks per topic/lab). This exposure to various topics will act as a stepping stone to later guide their personalized group research project.
-      <br><br><br><div class="contain">
-         The 4 topics will include:
-        <br><br> <div class="text2"> Ecology: </div><br>   Learning and analyzing how the natural ecological environment and competition between organisms affect <br> barnacle and bacterial populations.
-        <br><br> <div class="text2"> Bacterial Transformation: </div><br>   Learning how to make bacteria fluoresce by inserting plasmids in DNA via bacterial transformation.
-        <br><br>  <div class="text2"> Immunology and Epidemiology: </div><br>   Learning about coronaviruses, how it spreads, and how to prevent transsection through mock labs and <br> activities.
-        <br><br>  <div class="text2"> Evolution: </div><br>   Learning about the evolutionary relationships of various organisms’  nucleotide sequences and their <br> ancestors using BLAST (Basic Local Alignment Search Tool) created by NIH.
+
+    <br>
+    <div class="head"><a class="green">[   </a> Top Three <a class="green">   ]</a></div><br>
+
+    <img src="photos/default.png" class="first" alt="First Place">
+    <img src="photos/default.png" class="second" alt="Second Place">
+    <img src="photos/default.png" class="third" alt="Third Place">
+
+  </div>
+
+  <div class="section">
+
+    <br>
+    <div class="head"><a class="green">[   </a> Runners Up <a class="green">   ]</a></div><br>
+
+      <img src="photos/default.png" class="runner" alt="Runner-up">
+      <img src="photos/default.png" class="runner" alt="Runner-up">
+      <img src="photos/default.png" class="runner" alt="Runner-up">
+      <img src="photos/default.png" class="runner" alt="Runner-up">
+
+</div>
+
+<div class="section">
+
+  <br>
+  <div class="head"><a class="green">[   </a> Runners Up <a class="green">   ]</a></div><br>
+
+    <img src="photos/default.png" class="runner" alt="Runner-up">
+    <img src="photos/default.png" class="runner" alt="Runner-up">
+    <img src="photos/default.png" class="runner" alt="Runner-up">
+    <img src="photos/default.png" class="runner" alt="Runner-up">
+
+</div>
+
+
+<div>
+  <!-- Container for the image gallery -->
+  <div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="photos/elena.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="img_5terre_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="img_mountains_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="img_lights_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="img_snow_wide.jpg" style="width:100%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="photos/elena.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
       </div>
-      <br><br>  For the last 4 sessions of the program, mentors will assist participants to write a formal research paper, which we will post on our website at the end of the program.
-
-      On the last day of the program, one representative of each group will share their research question with everyone, and later we will have a guest speaker who will engage participants in various biology-related topics and current research. They will also be open to answering any questions you may have about high school or STEM in general.
-
+      <div class="column">
+        <img class="demo cursor" src="photos/elaine.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="photos/sanjay.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="photos/bhavya.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="photos/keertana.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="photos/marina.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+      </div>
     </div>
   </div>
 
-<div class="cal">
-  <div class="greenb">
-  <div class="des"><div class="des h">ORIENTATION</div>  </div><br>
-
-  <div class ="dates">
-    SEPT<br>5th
-  </div>
-</div>
-
-<div class="white">
-<div class="des"><div class="des h">TOPIC SESSIONS</div>  </div><br>
-
-<div class ="datesg">
-  SEPT<br>12th
-</div>
-<div class ="datesg">
-  SEPT<br>19th
-</div>
-<div class ="datesg">
-  SEPT<br>26th
-</div>
-<div class ="datesg">
-  OCT<br>3rd
-</div>
-<div class ="datesg">
-  OCT<br>10th
-</div>
-<div class ="datesg">
-  OCT<br>17th
-</div>
-<div class ="datesg">
-  OCT<br>24th
-</div>
-<div class ="datesg">
-  OCT<br>31th
-</div>
-</div>
-
-
-<div class="greenm">
-<div class="des"><div class="des h">RESEARCH SESSIONS</div>  </div><br>
-
-<div class ="dates">
-  NOV<br>7th
-</div>
-<div class ="dates">
-  NOV<br>14th
-</div>
-<div class ="dates">
-  NOV<br>21th
-</div>
-<div class ="dates">
-  DEC<br>5th
 </div>
 
 </div>
-
-<div class="white">
-<div class="des"><div class="des h">SYMPOSIUM</div>  </div><br>
-
-<div class ="datesg">
-  DEC<br>12th
-</div>
-
-</div>
-
-</div>
-
-</div>
-<br>
-
 
 <div class="footer">
 
